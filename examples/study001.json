@@ -1,0 +1,59 @@
+{
+  "studyId": "001",
+
+  "title": "In the Beginning",
+
+  "series": "Genesis",
+
+  "primaryScripture": "Genesis 1:1",
+
+  "bigIdea": "God created everything and reveals His glory through His creation.",
+
+  "audience": [
+    "Children",
+    "Family",
+    "Adult"
+  ],
+
+  "themes": [
+    "Creation",
+    "God's Glory",
+    "Authority of Scripture"
+  ],
+
+  "scriptureReferences": [
+    {
+      "reference": "Genesis 1:1",
+      "purpose": "Primary verse"
+    },
+    {
+      "reference": "Psalm 19:1",
+      "purpose": "Creation declares God's glory"
+    },
+    {
+      "reference": "Hebrews 11:3",
+      "purpose": "Faith in God's creative power"
+    }
+  ],
+
+  "learningObjectives": [
+    "Understand that God created all things.",
+    "Recognize creation as evidence of God's glory."
+  ],
+
+  "questions": [
+    "What does Genesis 1:1 tell us about God?",
+    "How does creation reveal God's glory?"
+  ],
+
+  "activities": [
+    "Creation illustration",
+    "Memory verse activity"
+  ],
+
+  "media": {
+    "thumbnailPrompt": "",
+    "posterPrompt": "",
+    "videoPrompt": ""
+  }
+}
