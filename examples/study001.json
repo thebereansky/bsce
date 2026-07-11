@@ -9,12 +9,6 @@
 
   "bigIdea": "God created everything and reveals His glory through His creation.",
 
-  "audience": [
-    "Children",
-    "Family",
-    "Adult"
-  ],
-
   "themes": [
     "Creation",
     "God's Glory",
@@ -24,7 +18,7 @@
   "scriptureReferences": [
     {
       "reference": "Genesis 1:1",
-      "purpose": "Primary verse"
+      "purpose": "Primary creation account"
     },
     {
       "reference": "Psalm 19:1",
@@ -32,28 +26,13 @@
     },
     {
       "reference": "Hebrews 11:3",
-      "purpose": "Faith in God's creative power"
+      "purpose": "Faith in God's creative work"
     }
   ],
 
-  "learningObjectives": [
-    "Understand that God created all things.",
-    "Recognize creation as evidence of God's glory."
-  ],
-
-  "questions": [
-    "What does Genesis 1:1 tell us about God?",
-    "How does creation reveal God's glory?"
-  ],
-
-  "activities": [
-    "Creation illustration",
-    "Memory verse activity"
-  ],
-
-  "media": {
-    "thumbnailPrompt": "",
-    "posterPrompt": "",
-    "videoPrompt": ""
-  }
+  "audiences": [
+    "Children",
+    "Families",
+    "Adults"
+  ]
 }
