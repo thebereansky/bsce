@@ -1,6 +1,6 @@
-# The Berean Sky Video Series Generator
+# The Berean Sky Lesson Series Generator
 
-You are creating a YouTube video series for The Berean Sky.
+You are creating a lesson series for a Berean Sky study.
 
 ## About The Berean Sky
 
@@ -54,12 +54,53 @@ Search
 Explore
 Reflect
 
-Every video should encourage viewers to:
+Every lesson should encourage learners to:
 
 - Search the Scriptures
 - Observe God's creation
 - Think carefully
 - Reflect on what they have learned
+
+---
+
+## Content Hierarchy
+
+The Berean Sky content is organized as:
+
+Series
+    ↓
+Study
+    ↓
+Lesson
+
+Examples:
+
+Series:
+Biblical Cosmology
+
+Study:
+Study 001 - In the Beginning
+
+Lessons:
+
+Lesson 001.1
+Why Does the Bible Begin with Creation?
+
+Lesson 001.2
+What Does Genesis 1:1 Teach About God?
+
+Lesson 001.3
+The Heavens Declare the Glory of God
+
+Lesson 001.4
+What Creation Reveals About the Creator
+
+Lesson 001.5
+Living in Light of the Creator
+
+Each lesson should explore one key concept from the study.
+
+Together, the lessons should fully cover the study.
 
 ---
 
@@ -73,17 +114,17 @@ Use the Master Study as the authoritative source.
 
 ## Objective
 
-Create a YouTube video series that teaches the key ideas contained in the Master Study.
+Create a lesson series that teaches the key ideas contained in the Master Study.
 
-The series should:
+The lesson series should:
 
-- Introduce the topic
+- Introduce the study topic
 - Explore the primary Scripture
 - Examine supporting Scriptures
 - Connect Scripture with creation
 - Encourage reflection and application
 
-The series should be suitable for:
+The lesson series should be suitable for:
 
 - Families
 - Older children
@@ -92,26 +133,36 @@ The series should be suitable for:
 
 ---
 
-## Series Design Guidelines
+## Lesson Design Guidelines
 
 Create between:
 
-3 and 7 videos
+3 and 7 lessons
 
-Each video should have:
+Each lesson should include:
 
-- Episode number
-- Episode title
+- Lesson ID
+- Lesson title
 - Learning objective
 - Summary
 - Key Scripture
 - Key takeaway
 
-The series should progress logically.
+The lessons should progress logically.
 
-Each episode should build on previous episodes.
+Each lesson should build on previous lessons.
 
-The final episode should emphasize reflection and application.
+The final lesson should emphasize reflection and application.
+
+Use lesson numbering that reflects the parent study.
+
+Example:
+
+- Lesson 001.1
+- Lesson 001.2
+- Lesson 001.3
+- Lesson 001.4
+- Lesson 001.5
 
 ---
 
@@ -126,14 +177,16 @@ Do not return explanations.
 Use this schema exactly:
 
 {
+  "series": "",
   "studyId": "",
   "sourceStudy": "",
-  "seriesTitle": "",
-  "seriesDescription": "",
+  "studyTitle": "",
+  "lessonSeriesTitle": "",
+  "lessonSeriesDescription": "",
   "targetAudience": [],
-  "episodes": [
+  "lessons": [
     {
-      "episodeNumber": 1,
+      "lessonId": "",
       "title": "",
       "learningObjective": "",
       "summary": "",
