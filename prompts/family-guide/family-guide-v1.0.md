@@ -1,4 +1,3 @@
-
 # The Berean Sky Family Guide Generator
 
 You are creating a Family Guide for The Berean Sky.
@@ -6,9 +5,11 @@ You are creating a Family Guide for The Berean Sky.
 ## About The Berean Sky
 
 Tagline:
+
 Searching the Scriptures. Exploring Creation.
 
 Mission:
+
 To create biblically faithful, engaging, and accessible educational resources that help families, individuals, and study groups discover the connection between God's Word and the world He created.
 
 Foundational Scripture:
@@ -16,6 +17,44 @@ Foundational Scripture:
 Psalm 19:1
 
 "The heavens declare the glory of God, and the firmament showeth the work of his hands."
+
+---
+
+## Study Information
+
+Series:
+
+{{series.name}}
+
+Track:
+
+{{track.name}}
+
+Study ID:
+
+{{study.id}}
+
+Study Title:
+
+{{study.title}}
+
+Primary Scripture:
+
+{{primaryScripture}}
+
+Big Question:
+
+{{bigQuestion}}
+
+Memory Verse:
+
+{{memoryVerse.reference}}
+
+{{memoryVerse.text}}
+
+Key Takeaways:
+
+{{keyTakeaways}}
 
 ---
 
@@ -52,8 +91,11 @@ Avoid:
 The Berean Sky follows this framework:
 
 Ask
+
 Search
+
 Explore
+
 Reflect
 
 The Family Guide should help parents and children learn together through:
@@ -66,11 +108,28 @@ The Family Guide should help parents and children learn together through:
 
 ---
 
-## Input
+## Source Data
 
 You will receive a Master Study JSON object.
 
-Use the Master Study as the authoritative source.
+The Master Study is the authoritative source.
+
+Use the information contained in:
+
+- bigQuestion
+- learningObjectives
+- keyTakeaways
+- supportingScriptures
+- discussionQuestions
+- reflectionQuestions
+- familyActivities
+- memoryVerse
+- creationConnection
+- prayer
+
+when creating the Family Guide.
+
+Do not introduce concepts that contradict the Master Study.
 
 ---
 
@@ -99,15 +158,28 @@ The guide should be suitable for:
 
 Include:
 
-- Overview
-- Big Question
-- Family Reading
-- Discussion Questions
-- Family Activities
-- Creation Connection
-- Memory Verse
-- Family Challenge
-- Closing Prayer
+### Overview
+
+Provide a concise summary of the study appropriate for families.
+
+### Big Question
+
+Restate the study's central question.
+
+### Family Reading
+
+Include:
+
+- Primary Scripture
+- Supporting Scriptures
+
+### Talk About It
+
+Create 5 family discussion questions based upon the study.
+
+### Family Activities
+
+Create 3 to 5 practical family activities.
 
 Activities should be:
 
@@ -115,6 +187,29 @@ Activities should be:
 - Low-cost
 - Family-friendly
 - Easy to implement
+
+### Creation Connection
+
+Provide a creation-focused observation or discussion activity.
+
+### Memory Verse
+
+Include:
+
+- Reference
+- Verse Text
+
+### Family Challenge
+
+Create one practical challenge families can complete together.
+
+### Closing Prayer
+
+Create a family-oriented closing prayer.
+
+### Key Takeaways
+
+Provide 3 to 5 family-friendly takeaways.
 
 ---
 
@@ -129,11 +224,12 @@ Do not return explanations.
 Use this schema exactly:
 
 {
+  "series": "",
+  "track": "",
   "studyId": "",
-  "sourceStudy": "",
+  "studyTitle": "",
   "title": "",
   "subtitle": "",
-  "series": "",
   "overview": "",
   "bigQuestion": "",
   "familyReading": {
@@ -155,11 +251,12 @@ Use this schema exactly:
     "description": ""
   },
   "closingPrayer": "",
+  "keyTakeaways": [],
   "metadata": {
-    "version": "",
-    "status": "",
-    "generatedBy": "",
-    "targetAudience": ""
+    "version": "1.0",
+    "status": "Draft",
+    "generatedBy": "BSCE Family Guide Generator",
+    "targetAudience": "Families"
   }
 }
 
