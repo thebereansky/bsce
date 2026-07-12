@@ -1,0 +1,27 @@
+{
+  "avoidPhrases": [
+    "endless universe",
+    "infinite universe",
+    "billions of years",
+    "millions of years",
+    "planet orbiting the sun",
+    "earth orbiting the sun",
+    "solar system",
+    "mikly way",
+    "vacuum of space",
+    "evolution produced",
+    "big bang"
+  ],
+
+  "preferredPhrases": [
+    "the heavens",
+    "the firmament",
+    "the sun, moon, and stars",
+    "sun following its given circuit",
+    "moon following its given circuit",
+    "wandering stars",
+    "God's creation",
+    "observable creation",
+    "the created order"
+  ]
+}
