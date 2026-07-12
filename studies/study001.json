@@ -1,1 +1,54 @@
-placeholder
+{
+  "series": {
+    "id": "001",
+    "name": "Biblical Cosmology"
+  },
+
+  "track": {
+    "id": "001",
+    "name": "Foundations"
+  },
+
+  "study": {
+    "id": "001",
+    "title": "In the Beginning"
+  },
+
+  "primaryScripture": "Genesis 1:1",
+
+  "bigIdea": "God created everything and reveals His glory through His creation.",
+
+  "themes": [
+    "Creation",
+    "God's Glory",
+    "Authority of Scripture"
+  ],
+
+  "scriptureReferences": [
+    {
+      "reference": "Genesis 1:1",
+      "purpose": "Primary creation account"
+    },
+    {
+      "reference": "Psalm 19:1",
+      "purpose": "Creation declares God's glory"
+    },
+    {
+      "reference": "Hebrews 11:3",
+      "purpose": "Faith in God's creative work"
+    }
+  ],
+
+  "audiences": [
+    "Children",
+    "Families",
+    "Adults"
+  ],
+
+  "metadata": {
+    "status": "Draft",
+    "version": "1.0",
+    "author": "The Berean Sky",
+    "createdBy": "BSCE"
+  }
+}
