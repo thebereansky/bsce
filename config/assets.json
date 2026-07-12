@@ -2,23 +2,27 @@
   "assets": [
     {
       "id": "master-study",
-      "subfolder": "02 - Master Study",
-      "prompt": "master-study"
+      "name": "Master Study",
+      "promptFolder": "master-study",
+      "outputFolder": "02 - Master Study",
+      "outputFilename": "master-study-{studyId}-v1.0.json",
+      "promptFilename": "master-study-{studyId}-prompt.md"
     },
     {
       "id": "family-guide",
-      "subfolder": "04 - Digital Products",
-      "prompt": "family-guide"
+      "name": "Family Guide",
+      "promptFolder": "family-guide",
+      "outputFolder": "04 - Digital Products",
+      "outputFilename": "family-guide-{studyId}-v1.0.json",
+      "promptFilename": "family-guide-{studyId}-prompt.md"
     },
     {
       "id": "quiz",
-      "subfolder": "04 - Digital Products",
-      "prompt": "quiz"
-    },
-    {
-      "id": "lesson-series",
-      "subfolder": "03 - YouTube",
-      "prompt": "lesson-series"
+      "name": "Quiz",
+      "promptFolder": "quiz",
+      "outputFolder": "04 - Digital Products",
+      "outputFilename": "quiz-{studyId}-v1.0.json",
+      "promptFilename": "quiz-{studyId}-prompt.md"
     }
   ]
 }
