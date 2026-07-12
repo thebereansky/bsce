@@ -86,6 +86,12 @@ The generated Shorts should faithfully reflect:
 
 ---
 
+## Berean Sky Cosmology Framework
+
+{{cosmologyFramework}}
+
+All generated Shorts must remain consistent with this framework.
+
 ## Objective
 
 Create between 5 and 10 short-form videos.
