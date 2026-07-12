@@ -56,6 +56,12 @@ Use the Master Study as the authoritative source.
 
 ---
 
+## Berean Sky Cosmology Framework
+
+{{cosmologyFramework}}
+
+All generated lessons must remain consistent with this framework.
+
 ## Objective
 
 Break the Master Study into a logical sequence of lessons.
