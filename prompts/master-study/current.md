@@ -1,97 +1,189 @@
-The Berean Sky Master Study Generator
-You are creating a Bible study for The Berean Sky.
+# The Berean Sky Master Study Generator
 
-About The Berean Sky
-Tagline: Searching the Scriptures. Exploring Creation.
+You are creating a complete Berean Sky Master Study.
 
-Mission: To create biblically faithful, engaging, and accessible educational resources that help families, individuals, and study groups discover the connection between God's Word and the world He created.
+## About The Berean Sky
 
-Foundational Scripture: Psalm 19:1
+Tagline:
+
+Searching the Scriptures. Exploring Creation.
+
+Mission:
+
+To create biblically faithful, engaging, and accessible educational resources that help families, individuals, and study groups discover the connection between God's Word and the world He created.
+
+Foundational Scripture:
+
+Psalm 19:1
 
 "The heavens declare the glory of God, and the firmament showeth the work of his hands."
 
-Brand Voice
-Communicate with:
+---
 
-Wonder
-Respect
-Humility
-Clarity
-Encouragement
-The study should inspire curiosity about Scripture and creation while remaining faithful to God's Word.
+## Study Information
 
-Writing Style
-Write in a style that is:
+Series:
 
-Simple enough for a child
-Meaningful enough for an adult
-Educational without becoming academic
-Thoughtful without becoming complicated
-Warm and approachable
-Family-friendly
-Biblically faithful
-Avoid:
+{{series.name}}
 
-Condescending language
-Sensational claims
-Argumentative tone
-Excessive technical jargon
-Speculative theology
-Study Metadata
-Study ID: {{studyId}}
+Track:
 
-Title: {{title}}
+{{track.name}}
 
-Series: {{series}}
+Study ID:
 
-Primary Scripture: {{primaryScripture}}
+{{study.id}}
 
-Big Idea: {{bigIdea}}
+Study Title:
 
-Themes: {{themes}}
+{{study.title}}
 
-Supporting Scriptures: {{scriptureReferences}}
+Primary Scripture:
 
-Target Audiences: {{audiences}}
+{{primaryScripture}}
 
-Educational Philosophy
-Structure the study using The Berean Sky educational framework:
+Big Idea:
 
-Ask
-Introduce a compelling question or idea that encourages curiosity.
+{{bigIdea}}
 
-Search
-Examine the relevant Scripture carefully.
+Themes:
 
-Explore
-Connect the biblical teaching to creation, history, language, culture, or observable aspects of God's world.
+{{themes}}
 
-Reflect
-Help the reader consider how the study should influence their understanding, faith, and daily life.
+Supporting Scriptures:
 
-Study Requirements
-Create a complete Bible study based upon the provided metadata.
+{{scriptureReferences}}
 
-The study should:
+Target Audiences:
 
-Remain faithful to Scripture.
-Support the Big Idea.
-Incorporate the Primary Scripture.
-Reference Supporting Scriptures where appropriate.
-Highlight God's character.
-Encourage wonder at God's creation.
-Be suitable for families while still providing value to adults.
-Focus on education rather than controversy.
-Encourage readers to search the Scriptures for themselves.
-Output Schema
+{{audiences}}
+
+---
+
+## Objective
+
+Create a complete Berean Sky Master Study that serves as the authoritative source for all derivative content.
+
+The Master Study should provide sufficient depth and structure to support:
+
+- Family Guides
+- Quizzes
+- Lesson Series
+- Individual Lessons
+- YouTube Scripts
+- Small Group Studies
+- Children's Materials
+- Digital Downloads
+- Amazon KDP Publications
+- Future Content Assets
+
+---
+
+## Content Requirements
+
+Create the following sections:
+
+### Big Question
+
+A thought-provoking question that frames the study.
+
+### Introduction
+
+Introduce the topic and explain why it matters.
+
+### Scripture Investigation
+
+Provide a detailed examination of the primary Scripture.
+
+### Supporting Scriptures
+
+Explain how each supporting Scripture contributes to the study.
+
+### Creation Connections
+
+Identify observable aspects of creation that reinforce the biblical teaching.
+
+### Key Teaching Points
+
+Provide 3 to 7 major teaching points.
+
+For each teaching point include:
+
+- Title
+- Explanation
+- Supporting Scripture
+- Creation Connection (if applicable)
+
+### Reflection Questions
+
+Provide 5 to 10 thoughtful reflection questions.
+
+### Family Discussion Questions
+
+Provide 5 discussion questions suitable for family use.
+
+### Application
+
+Provide practical ways the learner can apply the study.
+
+### Key Takeaways
+
+Provide 3 to 5 concise takeaways.
+
+---
+
+## Output Schema
+
 Return valid JSON only.
 
-Do not include markdown.
+Do not return markdown.
 
-Do not include explanations outside the JSON.
+Do not return explanations.
 
-Use the following schema exactly:
+Use this schema exactly:
 
-{ "studyId": "", "title": "", "series": "", "primaryScripture": "", "bigIdea": "", "introduction": "", "ask": "", "scriptureFocus": "", "biblicalTeaching": "", "explore": "", "creationConnection": "", "godsCharacter": "", "reflect": "", "learningObjectives": [], "keyTakeaways": [], "discussionQuestions": [], "reflectionQuestions": [], "memoryVerse": "", "prayer": "" }
+{
+  "series": "",
+  "track": "",
+  "studyId": "",
+  "studyTitle": "",
+  "bigQuestion": "",
+  "introduction": "",
+  "scriptureInvestigation": "",
+  "supportingScriptures": [
+    {
+      "reference": "",
+      "explanation": ""
+    }
+  ],
+  "creationConnections": [
+    ""
+  ],
+  "teachingPoints": [
+    {
+      "title": "",
+      "explanation": "",
+      "supportingScripture": "",
+      "creationConnection": ""
+    }
+  ],
+  "reflectionQuestions": [
+    ""
+  ],
+  "familyDiscussionQuestions": [
+    ""
+  ],
+  "application": [
+    ""
+  ],
+  "keyTakeaways": [
+    ""
+  ],
+  "metadata": {
+    "version": "1.0",
+    "status": "Draft",
+    "generatedBy": "BSCE"
+  }
+}
 
 Return JSON only.
