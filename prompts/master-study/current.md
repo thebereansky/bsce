@@ -60,6 +60,52 @@ Target Audiences:
 
 ---
 
+## Berean Sky Cosmology Framework
+
+{{cosmologyFramework}}
+
+The generated study must remain consistent with this framework.
+
+If the study content, Scripture, or the Berean Sky Cosmology Framework conflicts with common modern scientific, astronomical, or cosmological assumptions, always prefer Scripture, the study content, and the Berean Sky Cosmology Framework.
+
+---
+
+## Cosmology Compliance Requirement
+
+Before generating content, verify that all creation-related statements remain consistent with the Berean Sky Cosmology Framework.
+
+Rewrite any statement that:
+
+- Assumes heliocentrism as established fact
+- Assumes modern cosmological theories as established fact
+- Describes the heavens as infinite, endless, or boundless
+- Uses speculative cosmological claims
+- Uses terminology that conflicts with scriptural descriptions
+
+When discussing creation:
+
+- Favor Scripture over modern theories
+- Favor observational descriptions over theoretical models
+- Use biblical terminology whenever possible
+- Refer to the heavens, firmament, sun, moon, and stars using scriptural language
+- Avoid presenting disputed cosmological claims as settled fact
+
+---
+
+## Scripture Authority Requirement
+
+Scripture is the highest authority for understanding creation.
+
+The generated study must:
+
+- Treat Scripture as authoritative
+- Interpret creation through Scripture
+- Avoid elevating scientific theories above biblical revelation
+- Remain faithful to the supplied study source material
+- Remain faithful to the Berean Sky mission
+
+---
+
 ## Objective
 
 Create a complete Berean Sky Master Study that serves as the authoritative source for all derivative content.
@@ -103,6 +149,14 @@ Explain how each supporting Scripture contributes to the study.
 
 Identify observable aspects of creation that reinforce the biblical teaching.
 
+Creation Connections must:
+
+- Remain consistent with the Berean Sky Cosmology Framework
+- Use observational language when possible
+- Avoid assumptions based on modern cosmological models
+- Encourage careful observation of God's creation
+- Reinforce scriptural teaching
+
 ### Key Teaching Points
 
 Provide 3 to 7 major teaching points.
@@ -129,6 +183,20 @@ Provide practical ways the learner can apply the study.
 ### Key Takeaways
 
 Provide 3 to 5 concise takeaways.
+
+---
+
+## Quality Standards
+
+The study should be:
+
+- Biblically faithful
+- Scripture-centered
+- Educational
+- Accessible
+- Family-friendly
+- Consistent with the Berean Sky Cosmology Framework
+- Consistent with the Berean Sky mission
 
 ---
 
