@@ -112,6 +112,8 @@ Use the Master Study as the authoritative source.
 
 ---
 
+If the study content conflicts with common modern cosmological assumptions, prefer the study content and the Berean Sky Cosmology Framework.
+
 ## Objective
 
 Create a lesson series that teaches the key ideas contained in the Master Study.
