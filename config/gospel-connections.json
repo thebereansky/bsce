@@ -2,15 +2,23 @@
   "connections": [
     {
       "theme": "Creator",
-      "connection": "The Creator of all things is also the Savior who offers redemption through Jesus Christ."
+      "connection": "The Creator of the heavens and the earth is also the Savior who offers redemption through Jesus Christ."
     },
     {
-      "theme": "Design",
-      "connection": "Creation points us to a Designer, and Scripture reveals His plan of salvation."
+      "theme": "Creation",
+      "connection": "Creation reveals God's power and wisdom, while the Gospel reveals His love and grace."
     },
     {
       "theme": "Glory",
-      "connection": "Creation reveals God's glory, and the Gospel reveals His grace."
+      "connection": "The heavens declare the glory of God, and the Gospel declares His mercy."
+    },
+    {
+      "theme": "Design",
+      "connection": "The order and beauty of creation point us toward the One who designed both the universe and the plan of salvation."
+    },
+    {
+      "theme": "Truth",
+      "connection": "The God who created the world has also revealed the truth of salvation through His Son."
     }
   ]
 }
