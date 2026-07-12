@@ -32,6 +32,12 @@ Use it as the authoritative source.
 
 ---
 
+## Berean Sky Cosmology Framework
+
+{{cosmologyFramework}}
+
+All narration must remain consistent with this framework.
+
 ## Objective
 
 Create a complete narrated YouTube lesson.
