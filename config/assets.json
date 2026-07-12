@@ -4,6 +4,7 @@
       "id": "master-study",
       "name": "Master Study",
       "promptFolder": "master-study",
+      "builderFunction": "buildMasterStudyPrompt",
       "outputFolder": "02 - Master Study",
       "outputFilename": "master-study-{studyId}-v1.0.json",
       "promptFilename": "master-study-{studyId}-prompt.md"
@@ -12,6 +13,7 @@
       "id": "family-guide",
       "name": "Family Guide",
       "promptFolder": "family-guide",
+      "builderFunction": "buildFamilyGuidePrompt",
       "outputFolder": "04 - Digital Products",
       "outputFilename": "family-guide-{studyId}-v1.0.json",
       "promptFilename": "family-guide-{studyId}-prompt.md"
@@ -20,6 +22,7 @@
       "id": "quiz",
       "name": "Quiz",
       "promptFolder": "quiz",
+      "builderFunction": "buildQuizPrompt",
       "outputFolder": "04 - Digital Products",
       "outputFilename": "quiz-{studyId}-v1.0.json",
       "promptFilename": "quiz-{studyId}-prompt.md"
