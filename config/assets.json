@@ -1,0 +1,24 @@
+{
+  "assets": [
+    {
+      "id": "master-study",
+      "subfolder": "02 - Master Study",
+      "prompt": "master-study"
+    },
+    {
+      "id": "family-guide",
+      "subfolder": "04 - Digital Products",
+      "prompt": "family-guide"
+    },
+    {
+      "id": "quiz",
+      "subfolder": "04 - Digital Products",
+      "prompt": "quiz"
+    },
+    {
+      "id": "lesson-series",
+      "subfolder": "03 - YouTube",
+      "prompt": "lesson-series"
+    }
+  ]
+}
