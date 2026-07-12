@@ -101,6 +101,8 @@ Do not introduce concepts that contradict the Master Study.
 
 All content must remain consistent with this framework.
 
+If the study content conflicts with common modern cosmological assumptions, prefer the study content and the Berean Sky Cosmology Framework.
+
 ## Objective
 
 Create a Family Guide that helps families explore the study together.
