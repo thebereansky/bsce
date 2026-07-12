@@ -1,27 +1,49 @@
 {
-  "id": "shorts",
-  "name": "Shorts",
-  "promptFolder": "shorts",
-  "builderFunction": "buildShortsPrompt",
-  "outputFolder": "03 - YouTube",
-  "outputFilename": "shorts-{studyId}-v1.0.json",
-  "promptFilename": "shorts-{studyId}-prompt.md"
-},
-{
-  "id": "lesson-series",
-  "name": "Lesson Series",
-  "promptFolder": "lesson-series",
-  "builderFunction": "buildLessonSeriesPrompt",
-  "outputFolder": "03 - YouTube",
-  "outputFilename": "lesson-series-{studyId}-v1.0.json",
-  "promptFilename": "lesson-series-{studyId}-prompt.md"
-},
-{
-  "id": "lesson-script",
-  "name": "Lesson Script",
-  "promptFolder": "lesson-script",
-  "builderFunction": "buildLessonScriptPrompt",
-  "outputFolder": "03 - YouTube",
-  "outputFilename": "lesson-script-{studyId}-v1.0.json",
-  "promptFilename": "lesson-script-{studyId}-prompt.md"
+  "assets": [
+    {
+      "id": "master-study",
+      "name": "Master Study",
+      "promptFolder": "master-study",
+      "builderFunction": "buildMasterStudyPrompt",
+      "outputFolder": "02 - Master Study",
+      "outputFilename": "master-study-{studyId}-v1.0.json",
+      "promptFilename": "master-study-{studyId}-prompt.md"
+    },
+    {
+      "id": "family-guide",
+      "name": "Family Guide",
+      "promptFolder": "family-guide",
+      "builderFunction": "buildFamilyGuidePrompt",
+      "outputFolder": "04 - Digital Products",
+      "outputFilename": "family-guide-{studyId}-v1.0.json",
+      "promptFilename": "family-guide-{studyId}-prompt.md"
+    },
+    {
+      "id": "shorts",
+      "name": "Shorts",
+      "promptFolder": "shorts",
+      "builderFunction": "buildShortsPrompt",
+      "outputFolder": "03 - YouTube",
+      "outputFilename": "shorts-{studyId}-v1.0.json",
+      "promptFilename": "shorts-{studyId}-prompt.md"
+    },
+    {
+      "id": "lesson-series",
+      "name": "Lesson Series",
+      "promptFolder": "lesson-series",
+      "builderFunction": "buildLessonSeriesPrompt",
+      "outputFolder": "03 - YouTube",
+      "outputFilename": "lesson-series-{studyId}-v1.0.json",
+      "promptFilename": "lesson-series-{studyId}-prompt.md"
+    },
+    {
+      "id": "lesson-script",
+      "name": "Lesson Script",
+      "promptFolder": "lesson-script",
+      "builderFunction": "buildLessonScriptPrompt",
+      "outputFolder": "03 - YouTube",
+      "outputFilename": "lesson-script-{studyId}-v1.0.json",
+      "promptFilename": "lesson-script-{studyId}-prompt.md"
+    }
+  ]
 }
