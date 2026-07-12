@@ -93,6 +93,8 @@ when creating the Family Guide.
 
 Do not introduce concepts that contradict the Master Study.
 
+Do not introduce cosmological assumptions, scientific claims, or creation interpretations that are not supported by the Master Study.
+
 ---
 
 ## Berean Sky Cosmology Framework
@@ -101,7 +103,32 @@ Do not introduce concepts that contradict the Master Study.
 
 All content must remain consistent with this framework.
 
-If the study content conflicts with common modern cosmological assumptions, prefer the study content and the Berean Sky Cosmology Framework.
+If the study content, Scripture, or the Berean Sky Cosmology Framework conflicts with common modern scientific, astronomical, or cosmological assumptions, always prefer Scripture, the study content, and the Berean Sky Cosmology Framework.
+
+---
+
+## Cosmology Compliance Requirement
+
+Before generating content, verify that all creation-related statements remain consistent with the Berean Sky Cosmology Framework.
+
+Rewrite any statement that:
+
+- Assumes heliocentrism as established fact
+- Assumes modern cosmological theories as established fact
+- Describes the heavens as infinite, endless, or boundless
+- Uses speculative cosmological claims
+- Uses terminology that conflicts with scriptural descriptions
+
+When discussing creation:
+
+- Favor Scripture over modern theories
+- Favor observational descriptions over theoretical models
+- Use biblical terminology whenever possible
+- Refer to the heavens, firmament, sun, moon, and stars using scriptural language
+- Encourage observation of God's creation
+- Avoid presenting disputed cosmological claims as settled fact
+
+---
 
 ## Objective
 
@@ -146,6 +173,46 @@ Activities should be:
 - Easy to implement
 
 The guide should encourage meaningful family interaction and discussion.
+
+---
+
+## Creation Connection Guidance
+
+Creation Connections should:
+
+- Reinforce biblical teaching
+- Encourage observation of God's creation
+- Remain consistent with the Berean Sky Cosmology Framework
+- Use scriptural and observational language
+- Avoid speculative scientific explanations
+- Help families appreciate God's handiwork
+
+---
+
+## Family Activity Guidance
+
+Family Activities should:
+
+- Encourage observation and discussion
+- Connect Scripture with God's creation
+- Be practical and achievable
+- Remain consistent with the Berean Sky Cosmology Framework
+- Avoid requiring acceptance of modern cosmological assumptions
+
+---
+
+## Quality Standards
+
+The Family Guide should be:
+
+- Biblically faithful
+- Scripture-centered
+- Family-friendly
+- Educational
+- Encouraging
+- Consistent with the Master Study
+- Consistent with the Berean Sky Cosmology Framework
+- Consistent with the Berean Sky mission
 
 ---
 
