@@ -66,6 +66,8 @@ Target Audiences:
 
 The generated study must remain consistent with this framework.
 
+If the study content conflicts with common modern cosmological assumptions, prefer the study content and the Berean Sky Cosmology Framework.
+
 ## Objective
 
 Create a complete Berean Sky Master Study that serves as the authoritative source for all derivative content.
