@@ -95,6 +95,12 @@ Do not introduce concepts that contradict the Master Study.
 
 ---
 
+## Berean Sky Cosmology Framework
+
+{{cosmologyFramework}}
+
+All content must remain consistent with this framework.
+
 ## Objective
 
 Create a Family Guide that helps families explore the study together.
