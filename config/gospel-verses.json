@@ -1,0 +1,34 @@
+{
+  "verses": [
+    {
+      "id": "john316",
+      "reference": "John 3:16",
+      "theme": "God's Love",
+      "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+    },
+    {
+      "id": "romans58",
+      "reference": "Romans 5:8",
+      "theme": "Christ's Sacrifice",
+      "text": "But God setteth out his love toward us, seeing that while we were yet sinners, Christ died for us."
+    },
+    {
+      "id": "romans623",
+      "reference": "Romans 6:23",
+      "theme": "Salvation",
+      "text": "For the wages of sin is death: but the gift of God is eternal life through Jesus Christ our Lord."
+    },
+    {
+      "id": "ephesians289",
+      "reference": "Ephesians 2:8-9",
+      "theme": "Grace",
+      "text": "For by grace are ye saved through faith..."
+    },
+    {
+      "id": "acts412",
+      "reference": "Acts 4:12",
+      "theme": "Christ Alone",
+      "text": "Neither is there salvation in any other..."
+    }
+  ]
+}
