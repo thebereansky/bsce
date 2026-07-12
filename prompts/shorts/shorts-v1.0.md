@@ -92,6 +92,8 @@ The generated Shorts should faithfully reflect:
 
 All generated Shorts must remain consistent with this framework.
 
+If the study content conflicts with common modern cosmological assumptions, prefer the study content and the Berean Sky Cosmology Framework.
+
 ## Objective
 
 Create between 5 and 10 short-form videos.
