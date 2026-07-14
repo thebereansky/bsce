@@ -85,15 +85,14 @@ The Master Study is the authoritative source.
 Use the information contained in:
 
 - bigQuestion
-- learningObjectives
+- introduction
 - keyTakeaways
 - supportingScriptures
-- discussionQuestions
+- teachingPoints
 - reflectionQuestions
-- familyActivities
-- memoryVerse
-- creationConnection
-- prayer
+- familyDiscussionQuestions
+- creationConnections
+- application
 
 when creating the Family Guide.
 
@@ -219,6 +218,19 @@ The Family Guide should be:
 - Consistent with the Master Study
 - Consistent with the Berean Sky Cosmology Framework
 - Consistent with the Berean Sky mission
+
+Internal Guidance Rule
+
+Follow all supplied cosmology guidance.
+
+Do not reference:
+
+- Internal frameworks
+- Internal standards
+- Internal methodologies
+- The phrase "Berean Sky Cosmology Framework"
+
+The reader should never be aware that internal content standards exist.
 
 ---
 
