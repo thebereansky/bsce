@@ -76,6 +76,12 @@ You will receive a Master Study JSON object.
 
 The Master Study is the authoritative source.
 
+Master Study JSON:
+
+{{sourceJson}}
+
+The Master Study is the authoritative source.
+
 Use the information contained in:
 
 - bigQuestion
