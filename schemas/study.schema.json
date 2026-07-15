@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Berean Sky Study",
+  "description": "Canonical structure for a Berean Sky Bible study",
+  "type": "object",
+
+  "properties": {
+
+    "studyId": {
+      "type": "string"
+    },
+
+    "title": {
+      "type": "string"
+    },
+
+    "series": {
+      "type": "string"
+    },
+
+    "primaryScripture": {
+      "type": "string"
+    },
+
+    "bigIdea": {
+      "type": "string"
+    },
+
+    "audience": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "themes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "scriptureReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "learningObjectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "media": {
+      "type": "object"
+    }
+
+  },
+
+  "required": [
+    "studyId",
+    "title",
+    "primaryScripture",
+    "bigIdea"
+  ]
+}

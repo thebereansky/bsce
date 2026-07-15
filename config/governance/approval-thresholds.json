@@ -1,0 +1,9 @@
+{
+  "autoApprove": 95,
+
+  "approveWithWarning": 85,
+
+  "regenerate": 70,
+
+  "reject": 0
+}

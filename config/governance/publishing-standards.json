@@ -1,0 +1,20 @@
+{
+  "amazon": {
+
+    "minimumDescriptionLength": 500,
+
+    "requireBullets": true
+
+  },
+
+  "youtube": {
+
+    "requireDescription": true,
+
+    "requireTags": true,
+
+    "requireThumbnailPrompt": true
+
+  }
+
+}

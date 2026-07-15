@@ -1,0 +1,24 @@
+{
+  "mappings": [
+    {
+      "studyTheme": "Creation",
+      "gospelTheme": "creator"
+    },
+    {
+      "studyTheme": "God's Glory",
+      "gospelTheme": "glory"
+    },
+    {
+      "studyTheme": "Authority of Scripture",
+      "gospelTheme": "truth"
+    },
+    {
+      "studyTheme": "Salvation",
+      "gospelTheme": "salvation"
+    },
+    {
+      "studyTheme": "Grace",
+      "gospelTheme": "grace"
+    }
+  ]
+}

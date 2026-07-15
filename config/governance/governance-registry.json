@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+
+  "sources": {
+
+    "contentBoundaries":
+      "config/content-boundaries.json",
+
+    "cosmologyFramework":
+      "config/cosmology-framework.md",
+
+    "brandIdentity":
+      "config/governance/brand-identity.json",
+
+    "qualityStandards":
+      "config/governance/quality-standards.json",
+
+    "publishingStandards":
+      "config/governance/publishing-standards.json",
+
+    "approvalThresholds":
+      "config/governance/approval-thresholds.json"
+
+  }
+
+}
