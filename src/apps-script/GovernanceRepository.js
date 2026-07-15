@@ -1,8 +1,17 @@
 /**
  * Governance Repository
- * Version 1.0
+ * Version 2.0
+ *
+ * Centralized governance loading layer.
+ *
+ * All governance files should be discoverable
+ * through governance-registry.json.
  */
 
+
+/**
+ * Load Governance Registry
+ */
 function getGovernanceRegistry() {
 
   return loadJsonFromGitHub(
@@ -14,70 +23,154 @@ function getGovernanceRegistry() {
 }
 
 
+/**
+ * Generic Governance Source Loader
+ */
+function loadGovernanceSource(
+  sourceName
+) {
+
+  const registry =
+    getGovernanceRegistry();
+
+  const path =
+    registry.sources[sourceName];
+
+  if (!path) {
+
+    throw new Error(
+
+      "Governance source not found: " +
+      sourceName
+
+    );
+
+  }
+
+  return path;
+
+}
+
+
+/**
+ * Brand Identity
+ */
 function getBrandIdentity() {
 
-  const registry =
-    getGovernanceRegistry();
+  const path =
+    loadGovernanceSource(
+      "brandIdentity"
+    );
 
   return loadJsonFromGitHub(
 
-    buildGitHubUrl(
-      registry.sources.brandIdentity
-    )
+    buildGitHubUrl(path)
 
   );
 
 }
 
 
+/**
+ * Content Boundaries
+ */
+function getContentBoundaries() {
+
+  const path =
+    loadGovernanceSource(
+      "contentBoundaries"
+    );
+
+  return loadJsonFromGitHub(
+
+    buildGitHubUrl(path)
+
+  );
+
+}
+
+
+/**
+ * Cosmology Framework
+ *
+ * Markdown is authoritative.
+ */
+function getCosmologyFramework() {
+
+  const path =
+    loadGovernanceSource(
+      "cosmologyFramework"
+    );
+
+  return loadTextFromGitHub(
+
+    buildGitHubUrl(path)
+
+  );
+
+}
+
+
+/**
+ * Quality Standards
+ */
 function getQualityStandards() {
 
-  const registry =
-    getGovernanceRegistry();
+  const path =
+    loadGovernanceSource(
+      "qualityStandards"
+    );
 
   return loadJsonFromGitHub(
 
-    buildGitHubUrl(
-      registry.sources.qualityStandards
-    )
+    buildGitHubUrl(path)
 
   );
 
 }
 
 
+/**
+ * Publishing Standards
+ */
 function getPublishingStandards() {
 
-  const registry =
-    getGovernanceRegistry();
+  const path =
+    loadGovernanceSource(
+      "publishingStandards"
+    );
 
   return loadJsonFromGitHub(
 
-    buildGitHubUrl(
-      registry.sources.publishingStandards
-    )
+    buildGitHubUrl(path)
 
   );
 
 }
 
 
+/**
+ * Approval Thresholds
+ */
 function getApprovalThresholds() {
 
-  const registry =
-    getGovernanceRegistry();
+  const path =
+    loadGovernanceSource(
+      "approvalThresholds"
+    );
 
   return loadJsonFromGitHub(
 
-    buildGitHubUrl(
-      registry.sources.approvalThresholds
-    )
+    buildGitHubUrl(path)
 
   );
 
 }
 
 
+/**
+ * Complete Governance Context
+ */
 function buildGovernanceContext() {
 
   return {
@@ -101,5 +194,27 @@ function buildGovernanceContext() {
       getApprovalThresholds()
 
   };
+
+}
+
+
+/**
+ * Governance Context Test
+ */
+function testGovernanceContext() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      buildGovernanceContext(),
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
