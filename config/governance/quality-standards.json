@@ -1,0 +1,35 @@
+{
+  "minimumScore": 85,
+
+  "familyGuide": {
+
+    "requiredSections": [
+
+      "overview",
+      "bigQuestion",
+      "familyReading",
+      "talkAboutIt",
+      "familyActivities",
+      "memoryVerse",
+      "familyChallenge",
+      "closingPrayer"
+
+    ]
+
+  },
+
+  "shorts": {
+
+    "requireHook": true,
+
+    "requireCallToAction": true
+
+  },
+
+  "lessonSeries": {
+
+    "minimumLessons": 3
+
+  }
+
+}
