@@ -1,6 +1,6 @@
 /**
  * AI Quality Assurance Engine
- * Version 1.0
+ * Version 1.1
  */
 
 function evaluateAssetQuality(
@@ -14,18 +14,37 @@ function evaluateAssetQuality(
   const standards =
     getQAStandards();
 
+  const validation =
+    validateGovernance(
+      assetType,
+      assetContent
+    );
+
+  const overallScore =
+    calculateOverallScore(
+      validation
+    );
+
   return {
 
     assetType:
       assetType,
 
     score:
-      100,
+      overallScore,
 
     recommendation:
-      "APPROVE",
+      getRecommendation(
+        overallScore
+      ),
 
-    findings: [],
+    findings:
+      collectFindings(
+        validation
+      ),
+
+    validation:
+      validation,
 
     governanceVersion:
       governance.brandIdentity.version ||
@@ -41,6 +60,9 @@ function evaluateAssetQuality(
 }
 
 
+/**
+ * QA Standards Loader
+ */
 function getQAStandards() {
 
   return loadJsonFromGitHub(
@@ -56,35 +78,84 @@ function getQAStandards() {
 }
 
 
-function testQAEngine() {
+/**
+ * Calculate Overall Score
+ */
+function calculateOverallScore(
+  validation
+) {
 
-  const result =
+  const scores =
+    validation.scores;
 
-    evaluateAssetQuality(
+  let total = 0;
+  let count = 0;
 
-      "masterStudy",
+  Object.keys(scores)
+    .forEach(function(key) {
 
-      {
+      total +=
+        scores[key].score;
 
-        title:
-          "Test Study"
+      count++;
 
-      }
+    });
+
+  return Math.round(
+    total / count
+  );
+
+}
+
+
+/**
+ * Collect Findings
+ */
+function collectFindings(
+  validation
+) {
+
+  const findings = [];
+
+  Object.keys(
+    validation.scores
+  ).forEach(function(key) {
+
+    findings.push.apply(
+
+      findings,
+
+      validation.scores[key]
+        .findings
 
     );
 
-  Logger.log(
+  });
 
-    JSON.stringify(
+  return findings;
 
-      result,
+}
 
-      null,
 
-      2
+/**
+ * Recommendation Logic
+ */
+function getRecommendation(
+  score
+) {
 
-    )
+  if (score >= 90) {
 
-  );
+    return "APPROVE";
+
+  }
+
+  if (score >= 75) {
+
+    return "REGENERATE";
+
+  }
+
+  return "REJECT";
 
 }
