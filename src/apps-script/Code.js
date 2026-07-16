@@ -1512,3 +1512,38 @@ function testWorkbook() {
   );
 
 }
+
+/**
+ * Test Function
+ */
+function testKDPBook() {
+
+  const book =
+    buildKDPBook();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      book,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+  Logger.log(
+
+    "Estimated Pages: " +
+
+    estimateKDPPageCount(
+      book
+    )
+
+  );
+
+}
+
