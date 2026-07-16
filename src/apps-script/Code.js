@@ -1615,3 +1615,8 @@ function testShortsProductionEngine() {
 
 }
 
+function testShortsVideoFactory() {
+
+  generateShortsVideoPackage();
+
+}
