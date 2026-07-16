@@ -58,3 +58,22 @@ function loadTextFromGitHub(
   return response.getContentText();
 
 }
+
+/**
+ * Build GitHub Raw URL
+ */
+function buildGitHubUrl(
+  path
+) {
+
+  return (
+
+    BSCE_CONFIG.GITHUB_RAW_BASE_URL +
+
+    "/" +
+
+    path
+
+  );
+
+}
