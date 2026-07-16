@@ -1,12 +1,15 @@
 /**
  * Product Catalog Generator
- * Version 1.0
+ * Version 2.0
  */
 
 function buildProductCatalog() {
 
   const study =
     getActiveStudy();
+
+  const catalog =
+    getProductCatalog();
 
   return {
 
@@ -16,20 +19,32 @@ function buildProductCatalog() {
     studyTitle:
       study.study.title,
 
-    products: [
+    generatedOn:
+      new Date()
+        .toISOString(),
 
-      "Family Guide",
-
-      "Workbook",
-
-      "KDP Book",
-
-      "Lesson Series",
-
-      "Video Series"
-
-    ]
+    products:
+      catalog.products
 
   };
+
+}
+
+
+function testProductCatalogGenerator() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      buildProductCatalog(),
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
