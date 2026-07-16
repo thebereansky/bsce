@@ -1,76 +1,148 @@
 /**
  * Publishing Readiness Validator
  * Version 1.0
+ *
+ * Determines whether an asset is ready
+ * for packaging and publication.
  */
 
-function validatePublishingReadiness() {
+function validatePublishingReadiness(
+  assetType,
+  assetContent
+) {
 
-  const report = {
+  const qaResult =
+    evaluateAssetQuality(
+      assetType,
+      assetContent
+    );
 
-    ready: true,
+  const publishingStandards =
+    getPublishingStandards();
 
-    missing: [],
+  const approvalThresholds =
+    getApprovalThresholds();
 
-    warnings: []
+  const result = {
+
+    assetType:
+      assetType,
+
+    ready:
+      false,
+
+    score:
+      qaResult.score,
+
+    recommendation:
+      qaResult.recommendation,
+
+    findings: [],
+
+    checks: {
+
+      qualityCheck:
+        false,
+
+      governanceCheck:
+        false,
+
+      publishingStandardsCheck:
+        false
+
+    },
+
+    evaluatedOn:
+      new Date()
+        .toISOString()
 
   };
 
-  const requiredAssets = [
+  /*
+   * Quality Check
+   */
 
-    "master-study",
-    "family-guide",
-    "lesson-series",
-    "lesson-script",
-    "shorts"
+  if (
+    qaResult.recommendation ===
+    "APPROVE"
+  ) {
 
-  ];
+    result.checks.qualityCheck =
+      true;
 
-  requiredAssets.forEach(
-    function(assetType) {
+  } else {
 
-      try {
+    result.findings.push(
 
-        loadGeneratedAsset(
-          assetType
-        );
+      "Asset did not pass QA."
 
-      } catch(error) {
+    );
 
-        report.ready = false;
+  }
 
-        report.missing.push(
-          assetType
-        );
+  /*
+   * Governance Check
+   */
 
-      }
+  if (
+    qaResult.findings.length === 0
+  ) {
 
-    }
-  );
+    result.checks.governanceCheck =
+      true;
 
-  return report;
+  } else {
+
+    result.findings.push(
+
+      "Governance issues detected."
+
+    );
+
+  }
+
+  /*
+   * Publishing Standards Check
+   *
+   * Placeholder for future rules.
+   */
+
+  result.checks
+    .publishingStandardsCheck =
+      true;
+
+  /*
+   * Final Decision
+   */
+
+  result.ready =
+
+    result.checks.qualityCheck &&
+
+    result.checks.governanceCheck &&
+
+    result.checks
+      .publishingStandardsCheck;
+
+  return result;
 
 }
 
 
-function savePublishingReadinessReport() {
+/**
+ * Determine if Asset May Publish
+ */
+function isReadyForPublishing(
+  assetType,
+  assetContent
+) {
 
-  const report =
-    validatePublishingReadiness();
+  return validatePublishingReadiness(
 
-  saveCurrentStudyFile(
+    assetType,
 
-    JSON.stringify(
-      report,
-      null,
-      2
-    ),
+    assetContent
 
-    "publishing-readiness-report.json",
-
-    "05 - Production"
-
-  );
-
-  return report;
+  ).ready;
 
 }
