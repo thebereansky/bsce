@@ -1355,3 +1355,79 @@ function testRequiredSectionsValidation() {
   );
 
 }
+
+/**
+ * Test Family Guide Generation
+ */
+function testFamilyGuideGenerator() {
+
+  const result =
+    buildFamilyGuide();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
+
+
+/**
+ * Test Lesson Series Generation
+ */
+function testLessonSeriesGenerator() {
+
+  const result =
+    buildLessonSeries();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
+
+
+/**
+ * Test Product Factory
+ */
+function testProductFactory() {
+
+  const products =
+    buildAllProducts();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      Object.keys(
+        products
+      ),
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
