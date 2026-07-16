@@ -1,6 +1,6 @@
 /**
  * Product Factory
- * Version 2.0
+ * Version 2.2
  *
  * Catalog-driven product generation.
  */
@@ -12,17 +12,20 @@ function buildAllProducts() {
   const catalog =
     getProductCatalog();
 
+  Logger.log(
+    "Building Products From Catalog..."
+  );
+
   catalog.products.forEach(
 
     function(product) {
 
       const asset =
-
         buildProductById(
           product.id
         );
 
-      if (asset) {
+      if (asset !== null) {
 
         products[
           product.id
@@ -32,6 +35,10 @@ function buildAllProducts() {
 
     }
 
+  );
+
+  Logger.log(
+    "Product Generation Complete."
   );
 
   return products;
@@ -52,6 +59,10 @@ function buildProductById(
 
       return buildFamilyGuide();
 
+    case "lessonSeries":
+
+      return buildLessonSeries();
+
     case "workbook":
 
       return buildWorkbook();
@@ -59,14 +70,6 @@ function buildProductById(
     case "kdpBook":
 
       return buildKDPBook();
-
-    case "lessonSeries":
-
-      return buildLessonSeries();
-
-    case "videoSeries":
-
-      return buildVideoSeries();
 
     case "amazonDescription":
 
@@ -88,18 +91,54 @@ function buildProductById(
 
       return buildEmailSequence();
 
+    /*
+     * Future Assets
+     */
+
+    case "videoSeries":
+
+      Logger.log(
+        "Skipping videoSeries (not implemented yet)"
+      );
+
+      return null;
+
     default:
 
       Logger.log(
-
         "Unknown product: " +
-
         productId
-
       );
 
       return null;
 
   }
+
+}
+
+
+/**
+ * Product Factory Test
+ */
+function testProductFactory() {
+
+  const products =
+    buildAllProducts();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      Object.keys(
+        products
+      ),
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
