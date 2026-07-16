@@ -1620,3 +1620,19 @@ function testShortsVideoFactory() {
   generateShortsVideoPackage();
 
 }
+
+function testShortVoiceover() {
+
+  const shorts =
+    buildShorts();
+
+  const result =
+    generateShortVoiceover(
+      shorts[0]
+    );
+
+  Logger.log(
+    result.narration
+  );
+
+}
