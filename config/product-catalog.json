@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+
+  "products": [
+
+    {
+      "id": "familyGuide",
+      "name": "Family Guide PDF",
+      "category": "Digital Product",
+      "revenueGenerating": true
+    },
+
+    {
+      "id": "workbook",
+      "name": "Workbook PDF",
+      "category": "Digital Product",
+      "revenueGenerating": true
+    },
+
+    {
+      "id": "kdpBook",
+      "name": "KDP Study Guide",
+      "category": "Amazon Product",
+      "revenueGenerating": true
+    },
+
+    {
+      "id": "lessonSeries",
+      "name": "Lesson Series",
+      "category": "Educational Asset",
+      "revenueGenerating": false
+    },
+
+    {
+      "id": "videoSeries",
+      "name": "Video Series",
+      "category": "YouTube Asset",
+      "revenueGenerating": true
+    },
+
+    {
+      "id": "amazonDescription",
+      "name": "Amazon Description",
+      "category": "Marketing Asset",
+      "revenueGenerating": false
+    },
+
+    {
+      "id": "seoContent",
+      "name": "SEO Content",
+      "category": "Marketing Asset",
+      "revenueGenerating": false
+    },
+
+    {
+      "id": "landingPage",
+      "name": "Landing Page",
+      "category": "Marketing Asset",
+      "revenueGenerating": false
+    },
+
+    {
+      "id": "socialCampaign",
+      "name": "Social Media Campaign",
+      "category": "Marketing Asset",
+      "revenueGenerating": false
+    },
+
+    {
+      "id": "emailCampaign",
+      "name": "Email Campaign",
+      "category": "Marketing Asset",
+      "revenueGenerating": false
+    }
+
+  ]
+
+}
