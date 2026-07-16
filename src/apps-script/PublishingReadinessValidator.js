@@ -1,6 +1,6 @@
 /**
  * Publishing Readiness Validator
- * Version 1.0
+ * Version 1.1
  *
  * Determines whether an asset is ready
  * for packaging and publication.
@@ -17,12 +17,6 @@ function validatePublishingReadiness(
       assetContent
     );
 
-  const publishingStandards =
-    getPublishingStandards();
-
-  const approvalThresholds =
-    getApprovalThresholds();
-
   const result = {
 
     assetType:
@@ -37,7 +31,8 @@ function validatePublishingReadiness(
     recommendation:
       qaResult.recommendation,
 
-    findings: [],
+    findings:
+      qaResult.findings,
 
     checks: {
 
@@ -59,7 +54,35 @@ function validatePublishingReadiness(
   };
 
   /*
-   * Quality Check
+   * Governance always wins.
+   */
+
+  if (
+
+    qaResult.validation &&
+    qaResult.validation.hasCriticalViolation
+
+  ) {
+
+    result.findings.push({
+
+      severity:
+        "CRITICAL",
+
+      category:
+        "Publishing",
+
+      message:
+        "Publishing blocked due to governance violation."
+
+    });
+
+    return result;
+
+  }
+
+  /*
+   * QA Approval
    */
 
   if (
@@ -70,50 +93,32 @@ function validatePublishingReadiness(
     result.checks.qualityCheck =
       true;
 
-  } else {
-
-    result.findings.push(
-
-      "Asset did not pass QA."
-
-    );
-
   }
 
   /*
-   * Governance Check
+   * Governance Approval
    */
 
   if (
-    qaResult.findings.length === 0
+
+    qaResult.validation &&
+    qaResult.validation.passed
+
   ) {
 
     result.checks.governanceCheck =
       true;
 
-  } else {
-
-    result.findings.push(
-
-      "Governance issues detected."
-
-    );
-
   }
 
   /*
-   * Publishing Standards Check
-   *
-   * Placeholder for future rules.
+   * Placeholder
+   * Future publishing rules.
    */
 
   result.checks
     .publishingStandardsCheck =
       true;
-
-  /*
-   * Final Decision
-   */
 
   result.ready =
 
@@ -130,7 +135,7 @@ function validatePublishingReadiness(
 
 
 /**
- * Determine if Asset May Publish
+ * Publishing Gate
  */
 function isReadyForPublishing(
   assetType,
@@ -144,5 +149,45 @@ function isReadyForPublishing(
     assetContent
 
   ).ready;
+
+}
+
+
+/**
+ * Test
+ */
+function testPublishingReadiness() {
+
+  const result =
+
+    validatePublishingReadiness(
+
+      "masterStudy",
+
+      {
+
+        title:
+          "Test Study",
+
+        content:
+          "The Big Bang proved the universe began billions of years ago."
+
+      }
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
