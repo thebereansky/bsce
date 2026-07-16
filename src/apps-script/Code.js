@@ -1242,3 +1242,36 @@ function testQAStandards() {
   );
 
 }
+
+function testPublishingReadiness() {
+
+  const result =
+
+    validatePublishingReadiness(
+
+      "masterStudy",
+
+      {
+
+        title:
+          "Test Study"
+
+      }
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
