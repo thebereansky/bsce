@@ -10,35 +10,52 @@ Status: Planned
 
 Evaluate generated assets before publication.
 
-AI QA should determine:
+The QA process should determine:
 
-- Does the asset follow governance?
-- Does the asset follow cosmology standards?
-- Is the asset educational?
-- Is the asset complete?
-- Is the asset publishable?
+- Governance compliance
+- Scripture fidelity
+- Cosmology compliance
+- Educational quality
+- Publication readiness
 
 ---
 
 # Inputs
 
-Governance Context
-
 Generated Asset
 
-Asset Type
+Governance Context
 
 QA Standards
 
+Asset Type
+
 ---
 
-# Outputs
+# Governance Sources
 
-{
-  score: 92,
-  recommendation: "APPROVE",
-  findings: []
-}
+- brand-identity.json
+- content-boundaries.json
+- cosmology-framework.md
+- quality-standards.json
+- publishing-standards.json
+- approval-thresholds.json
+
+---
+
+# Workflow
+
+Generated Asset
+      ↓
+Governance Validator
+      ↓
+AI QA Engine
+      ↓
+Score
+      ↓
+Recommendation
+      ↓
+Publishing Validator
 
 ---
 
@@ -62,28 +79,14 @@ Asset violates governance.
 
 ---
 
-# Workflow
-
-Generated Asset
-      ↓
-Governance Context
-      ↓
-AI QA Engine
-      ↓
-Score
-      ↓
-Approve / Regenerate / Reject
-      ↓
-Publishing
-
----
-
 # Long-Term Goal
 
-Human review should only occur:
+Human review should become an exception rather than the primary quality-control mechanism.
 
-- During development
-- For random spot checks
-- For disputed content
+Governance should be evaluated consistently across:
 
-Routine content should be approved automatically.
+- Generation
+- QA
+- Publishing
+
+using the same governance context.
