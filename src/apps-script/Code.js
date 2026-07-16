@@ -1160,3 +1160,22 @@ function testQAEngine() {
   );
 
 }
+
+function testPromptDataBuilder() {
+
+  const data =
+    buildPromptData(
+      "master-study"
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+      data,
+      null,
+      2
+    )
+
+  );
+
+}
