@@ -14,9 +14,7 @@ function savePromptToDrive(
 ) {
 
   const root =
-    DriveApp.getFolderById(
-      BSCE_CONFIG.ENGINE_ROOT_FOLDER_ID
-    );
+    getSeriesRootFolder();
 
   const folders =
     root.getFoldersByName(
