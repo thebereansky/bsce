@@ -1558,3 +1558,21 @@ function testKDPPrototype() {
 
 }
 
+function testVideoSeriesPrototype() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      buildVideoSeriesPrototype(),
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
+
