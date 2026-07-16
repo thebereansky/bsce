@@ -1,6 +1,6 @@
 /**
  * AI Quality Assurance Engine
- * Version 1.1
+ * Version 1.2
  */
 
 function evaluateAssetQuality(
@@ -20,10 +20,13 @@ function evaluateAssetQuality(
       assetContent
     );
 
+  /*
+   * GovernanceValidator is now
+   * the authoritative scoring source.
+   */
+
   const overallScore =
-    calculateOverallScore(
-      validation
-    );
+    validation.overallScore;
 
   return {
 
@@ -35,13 +38,12 @@ function evaluateAssetQuality(
 
     recommendation:
       getRecommendation(
-        overallScore
+        overallScore,
+        validation
       ),
 
     findings:
-      collectFindings(
-        validation
-      ),
+      validation.findings,
 
     validation:
       validation,
@@ -79,70 +81,45 @@ function getQAStandards() {
 
 
 /**
- * Calculate Overall Score
- */
-function calculateOverallScore(
-  validation
-) {
-
-  const scores =
-    validation.scores;
-
-  let total = 0;
-  let count = 0;
-
-  Object.keys(scores)
-    .forEach(function(key) {
-
-      total +=
-        scores[key].score;
-
-      count++;
-
-    });
-
-  return Math.round(
-    total / count
-  );
-
-}
-
-
-/**
- * Collect Findings
- */
-function collectFindings(
-  validation
-) {
-
-  const findings = [];
-
-  Object.keys(
-    validation.scores
-  ).forEach(function(key) {
-
-    findings.push.apply(
-
-      findings,
-
-      validation.scores[key]
-        .findings
-
-    );
-
-  });
-
-  return findings;
-
-}
-
-
-/**
  * Recommendation Logic
+ *
+ * Governance violations always
+ * override score-based decisions.
  */
 function getRecommendation(
-  score
+  score,
+  validation
 ) {
+
+  /*
+   * Critical violations
+   * immediately fail QA.
+   */
+
+  if (
+    validation.hasCriticalViolation
+  ) {
+
+    return "REJECT";
+
+  }
+
+  /*
+   * Major violations
+   * require regeneration.
+   */
+
+  if (
+    validation.hasMajorViolation
+  ) {
+
+    return "REGENERATE";
+
+  }
+
+  /*
+   * Quality scoring
+   */
 
   if (score >= 90) {
 
@@ -157,5 +134,42 @@ function getRecommendation(
   }
 
   return "REJECT";
+
+}
+
+
+/**
+ * QA Test
+ */
+function testQAEngine() {
+
+  const result =
+
+    evaluateAssetQuality(
+
+      "masterStudy",
+
+      {
+
+        title:
+          "Test Study"
+
+      }
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
