@@ -1431,3 +1431,60 @@ function testProductFactory() {
   );
 
 }
+
+/**
+ * Test Document Export Engine
+ */
+function testDocumentExportEngine() {
+
+  Logger.log(
+    "========================================"
+  );
+
+  Logger.log(
+    "TEST DOCUMENT EXPORT ENGINE"
+  );
+
+  Logger.log(
+    "========================================"
+  );
+
+  const exports =
+    exportAllDocuments();
+
+  Logger.log(
+    "Exported Documents:"
+  );
+
+  Object.keys(
+    exports
+  ).forEach(function(key) {
+
+    const file =
+      exports[key];
+
+    Logger.log(
+      key +
+      ": " +
+      file.getName()
+    );
+
+    Logger.log(
+      file.getUrl()
+    );
+
+  });
+
+  Logger.log(
+    "========================================"
+  );
+
+  Logger.log(
+    "Document Export Test Complete"
+  );
+
+  Logger.log(
+    "========================================"
+  );
+
+}
