@@ -1128,6 +1128,9 @@ function testBrandIdentity() {
 
 }
 
+/**
+ * QA Test
+ */
 function testQAEngine() {
 
   const result =
@@ -1139,7 +1142,10 @@ function testQAEngine() {
       {
 
         title:
-          "Test Study"
+          "Test Study",
+
+        content:
+          "The Big Bang proved the universe began billions of years ago."
 
       }
 
