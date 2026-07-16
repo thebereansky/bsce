@@ -1594,3 +1594,24 @@ function testShortsPrototype() {
 
 }
 
+function testShortsProductionEngine() {
+
+  const shorts =
+    generateShortsPackage();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      shorts,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
+
