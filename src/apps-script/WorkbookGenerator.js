@@ -108,28 +108,3 @@ function buildWorkbookLessons(
   return lessons;
 
 }
-
-
-/**
- * Test Function
- */
-function testWorkbook() {
-
-  const workbook =
-    buildWorkbook();
-
-  Logger.log(
-
-    JSON.stringify(
-
-      workbook,
-
-      null,
-
-      2
-
-    )
-
-  );
-
-}
