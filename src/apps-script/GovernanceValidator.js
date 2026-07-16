@@ -1,6 +1,6 @@
 /**
  * Governance Validator
- * Version 1.0
+ * Version 1.1
  *
  * Centralized governance validation.
  */
@@ -17,7 +17,13 @@ function validateGovernance(
 
     passed: true,
 
+    overallScore: 100,
+
     findings: [],
+
+    hasCriticalViolation: false,
+
+    hasMajorViolation: false,
 
     scores: {}
 
@@ -55,34 +61,66 @@ function validateGovernance(
 
   const allFindings = [];
 
-Object.keys(
-  results.scores
-).forEach(function(key) {
+  let totalScore = 0;
+  let scoreCount = 0;
 
-  allFindings.push.apply(
+  Object.keys(
+    results.scores
+  ).forEach(function(key) {
 
-    allFindings,
+    const scoreResult =
+      results.scores[key];
 
-    results.scores[key]
-      .findings
+    totalScore +=
+      scoreResult.score;
 
-  );
+    scoreCount++;
 
-});
-
-results.findings =
-  allFindings;
-
-results.hasCriticalViolation =
-  allFindings.some(function(finding) {
-
-    return finding.severity === "CRITICAL";
+    allFindings.push.apply(
+      allFindings,
+      scoreResult.findings
+    );
 
   });
 
-results.passed =
-  !results.hasCriticalViolation;
-  
+  results.findings =
+    allFindings;
+
+  results.overallScore =
+    Math.round(
+      totalScore / scoreCount
+    );
+
+  results.hasCriticalViolation =
+    allFindings.some(function(finding) {
+
+      return (
+        finding.severity ===
+        "CRITICAL"
+      );
+
+    });
+
+  results.hasMajorViolation =
+    allFindings.some(function(finding) {
+
+      return (
+        finding.severity ===
+        "MAJOR"
+      );
+
+    });
+
+  /*
+   * Governance policy:
+   *
+   * Critical violations
+   * always fail validation.
+   */
+
+  results.passed =
+    !results.hasCriticalViolation;
+
   return results;
 
 }
@@ -97,8 +135,11 @@ function validateAgainstBrandIdentity(
 ) {
 
   return {
+
     score: 100,
+
     findings: []
+
   };
 
 }
@@ -130,16 +171,26 @@ function validateAgainstContentBoundaries(
       .forEach(function(term) {
 
         if (
+
           text.includes(
             term.toLowerCase()
           )
+
         ) {
 
-        findings.push({
-          severity: "CRITICAL",
-          category: "Content Boundaries",
-          message: "Prohibited term detected: big bang proved"
-        });
+          findings.push({
+
+            severity:
+              "CRITICAL",
+
+            category:
+              "Content Boundaries",
+
+            message:
+              "Prohibited term detected: " +
+              term
+
+          });
 
         }
 
@@ -171,8 +222,11 @@ function validateAgainstCosmologyFramework(
 ) {
 
   return {
+
     score: 100,
+
     findings: []
+
   };
 
 }
@@ -187,8 +241,11 @@ function validateAgainstQualityStandards(
 ) {
 
   return {
+
     score: 100,
+
     findings: []
+
   };
 
 }
@@ -203,12 +260,19 @@ function validateAgainstPublishingStandards(
 ) {
 
   return {
+
     score: 100,
+
     findings: []
+
   };
 
 }
 
+
+/**
+ * Prohibited Terms
+ */
 function getProhibitedTerms() {
 
   return loadJsonFromGitHub(
