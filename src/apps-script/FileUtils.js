@@ -19,3 +19,37 @@ function sanitizeFilename(
     .replace(/-+/g, "-");
 
 }
+
+/**
+ * Returns a child folder by name.
+ *
+ * Throws an error if the folder
+ * does not exist.
+ */
+function getChildFolderByName(
+  parentFolder,
+  folderName
+) {
+
+  const folders =
+    parentFolder.getFoldersByName(
+      folderName
+    );
+
+  if (
+    !folders.hasNext()
+  ) {
+
+    throw new Error(
+
+      "Folder not found: " +
+
+      folderName
+
+    );
+
+  }
+
+  return folders.next();
+
+}
