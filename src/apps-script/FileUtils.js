@@ -26,6 +26,10 @@ function sanitizeFilename(
  * Throws an error if the folder
  * does not exist.
  */
+/**
+ * Returns an existing child folder
+ * or creates it if missing.
+ */
 function getChildFolderByName(
   parentFolder,
   folderName
@@ -37,19 +41,15 @@ function getChildFolderByName(
     );
 
   if (
-    !folders.hasNext()
+    folders.hasNext()
   ) {
 
-    throw new Error(
-
-      "Folder not found: " +
-
-      folderName
-
-    );
+    return folders.next();
 
   }
 
-  return folders.next();
+  return parentFolder.createFolder(
+    folderName
+  );
 
 }
