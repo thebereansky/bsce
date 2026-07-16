@@ -53,6 +53,29 @@ function validateGovernance(
       governance.publishingStandards
     );
 
+  const allFindings = [];
+
+Object.keys(
+  results.scores
+).forEach(function(key) {
+
+  allFindings.push.apply(
+
+    allFindings,
+
+    results.scores[key]
+      .findings
+
+  );
+
+});
+
+results.findings =
+  allFindings;
+
+results.passed =
+  allFindings.length === 0;
+  
   return results;
 
 }
