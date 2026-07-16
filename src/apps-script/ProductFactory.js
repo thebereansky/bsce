@@ -1,33 +1,105 @@
 /**
  * Product Factory
- * Version 1.0
+ * Version 2.0
+ *
+ * Catalog-driven product generation.
  */
 
 function buildAllProducts() {
 
-  return {
+  const products = {};
 
-    kdpBook:
-      buildKDPBook(),
+  const catalog =
+    getProductCatalog();
 
-    workbook:
-      buildWorkbook(),
+  catalog.products.forEach(
 
-    amazonDescription:
-      buildAmazonDescription(),
+    function(product) {
 
-    seo:
-      buildSEOContent(),
+      const asset =
 
-    landingPage:
-      buildLandingPage(),
+        buildProductById(
+          product.id
+        );
 
-    social:
-      buildSocialMediaCampaign(),
+      if (asset) {
 
-    email:
-      buildEmailSequence()
+        products[
+          product.id
+        ] = asset;
 
-  };
+      }
+
+    }
+
+  );
+
+  return products;
+
+}
+
+
+/**
+ * Product Dispatcher
+ */
+function buildProductById(
+  productId
+) {
+
+  switch (productId) {
+
+    case "familyGuide":
+
+      return buildFamilyGuide();
+
+    case "workbook":
+
+      return buildWorkbook();
+
+    case "kdpBook":
+
+      return buildKDPBook();
+
+    case "lessonSeries":
+
+      return buildLessonSeries();
+
+    case "videoSeries":
+
+      return buildVideoSeries();
+
+    case "amazonDescription":
+
+      return buildAmazonDescription();
+
+    case "seoContent":
+
+      return buildSEOContent();
+
+    case "landingPage":
+
+      return buildLandingPage();
+
+    case "socialCampaign":
+
+      return buildSocialMediaCampaign();
+
+    case "emailCampaign":
+
+      return buildEmailSequence();
+
+    default:
+
+      Logger.log(
+
+        "Unknown product: " +
+
+        productId
+
+      );
+
+      return null;
+
+  }
 
 }
