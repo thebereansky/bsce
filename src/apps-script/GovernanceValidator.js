@@ -82,9 +82,52 @@ function validateAgainstContentBoundaries(
   contentBoundaries
 ) {
 
+  const prohibited =
+    getProhibitedTerms();
+
+  const findings = [];
+
+  const text =
+    JSON.stringify(
+      assetContent
+    ).toLowerCase();
+
+  Object.keys(
+    prohibited.categories
+  ).forEach(function(category) {
+
+    prohibited.categories[category]
+      .forEach(function(term) {
+
+        if (
+          text.includes(
+            term.toLowerCase()
+          )
+        ) {
+
+          findings.push(
+
+            "Prohibited term detected: " +
+            term
+
+          );
+
+        }
+
+      });
+
+  });
+
   return {
-    score: 100,
-    findings: []
+
+    score:
+      findings.length > 0
+        ? 50
+        : 100,
+
+    findings:
+      findings
+
   };
 
 }
@@ -134,5 +177,19 @@ function validateAgainstPublishingStandards(
     score: 100,
     findings: []
   };
+
+}
+
+function getProhibitedTerms() {
+
+  return loadJsonFromGitHub(
+
+    buildGitHubUrl(
+
+      "config/governance/prohibited-terms.json"
+
+    )
+
+  );
 
 }
