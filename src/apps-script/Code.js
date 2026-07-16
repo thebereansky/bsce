@@ -1127,3 +1127,36 @@ function testBrandIdentity() {
   );
 
 }
+
+function testQAEngine() {
+
+  const result =
+
+    evaluateAssetQuality(
+
+      "masterStudy",
+
+      {
+
+        title:
+          "Test Study"
+
+      }
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
