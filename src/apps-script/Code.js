@@ -1547,3 +1547,14 @@ function testKDPBook() {
 
 }
 
+function testKDPPrototype() {
+
+  const result =
+    exportKDPPrototype();
+
+  Logger.log(
+    result.url
+  );
+
+}
+
