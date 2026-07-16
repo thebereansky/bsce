@@ -1,6 +1,6 @@
 /**
  * Prompt Data Builder
- * Version 3.0
+ * Version 4.0
  */
 
 function buildPromptData(
@@ -42,8 +42,31 @@ function buildPromptData(
       data.gospelTheme
     );
 
+  /*
+   * Legacy support
+   *
+   * Existing prompts currently
+   * reference {{cosmologyFramework}}.
+   */
+
   data.cosmologyFramework =
     getCosmologyFramework();
+
+  /*
+   * Governance Context
+   *
+   * Future prompts should use:
+   *
+   * {{governance.brandIdentity}}
+   * {{governance.contentBoundaries}}
+   * {{governance.cosmologyFramework}}
+   * {{governance.qualityStandards}}
+   * {{governance.publishingStandards}}
+   * {{governance.approvalThresholds}}
+   */
+
+  data.governance =
+    buildGovernanceContext();
 
   /*
    * IMPORTANT
