@@ -1488,3 +1488,27 @@ function testDocumentExportEngine() {
   );
 
 }
+
+/**
+ * Test Function
+ */
+function testWorkbook() {
+
+  const workbook =
+    buildWorkbook();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      workbook,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
