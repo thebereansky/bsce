@@ -1,6 +1,9 @@
 /**
  * Workbook Generator
- * Version 1.0
+ * Version 2.0
+ *
+ * Builds a structured workbook
+ * from the Master Study.
  */
 
 function buildWorkbook() {
@@ -15,34 +18,118 @@ function buildWorkbook() {
     title:
       masterStudy.studyTitle,
 
+    subtitle:
+      "Berean Sky Workbook",
+
+    introduction:
+      masterStudy.introduction,
+
     lessons:
       buildWorkbookLessons(
         masterStudy
-      )
+      ),
+
+    keyTakeaways:
+      masterStudy.keyTakeaways || [],
+
+    metadata: {
+
+      generatedOn:
+        new Date()
+          .toISOString(),
+
+      generatedBy:
+        "BSCE Workbook Generator"
+
+    }
 
   };
 
 }
 
 
+/**
+ * Builds workbook lessons from
+ * teaching points.
+ */
 function buildWorkbookLessons(
   masterStudy
 ) {
 
-  return [
+  const lessons = [];
 
-    {
+  const teachingPoints =
+    masterStudy.teachingPoints || [];
 
-      questions:
-        masterStudy
-          .reflectionQuestions,
+  teachingPoints.forEach(
+    function(
+      point,
+      index
+    ) {
 
-      activities:
-        masterStudy
-          .familyDiscussionQuestions
+      lessons.push({
+
+        lessonNumber:
+          index + 1,
+
+        title:
+          point.title ||
+
+          (
+            "Lesson " +
+            (index + 1)
+          ),
+
+        teachingPoint:
+          point.explanation || "",
+
+        supportingScripture:
+          point.supportingScripture || "",
+
+        creationConnection:
+          point.creationConnection || "",
+
+        reflectionQuestions:
+          masterStudy
+            .reflectionQuestions || [],
+
+        applicationIdeas:
+          masterStudy
+            .application || [],
+
+        notesSection:
+          true
+
+      });
 
     }
+  );
 
-  ];
+  return lessons;
+
+}
+
+
+/**
+ * Test Function
+ */
+function testWorkbook() {
+
+  const workbook =
+    buildWorkbook();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      workbook,
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
