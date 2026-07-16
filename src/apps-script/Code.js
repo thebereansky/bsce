@@ -1179,3 +1179,66 @@ function testPromptDataBuilder() {
   );
 
 }
+
+function testGovernanceValidator() {
+
+  const result =
+
+    validateGovernance(
+
+      "masterStudy",
+
+      {
+
+        title: "Test Study"
+
+      }
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
+
+
+function testQAStandards() {
+
+  const standards =
+
+    loadJsonFromGitHub(
+
+      buildGitHubUrl(
+
+        "config/governance/qa-standards.json"
+
+      )
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      standards,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
