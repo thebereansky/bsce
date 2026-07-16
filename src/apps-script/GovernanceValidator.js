@@ -73,8 +73,15 @@ Object.keys(
 results.findings =
   allFindings;
 
+results.hasCriticalViolation =
+  allFindings.some(function(finding) {
+
+    return finding.severity === "CRITICAL";
+
+  });
+
 results.passed =
-  allFindings.length === 0;
+  !results.hasCriticalViolation;
   
   return results;
 
@@ -128,12 +135,11 @@ function validateAgainstContentBoundaries(
           )
         ) {
 
-          findings.push(
-
-            "Prohibited term detected: " +
-            term
-
-          );
+        findings.push({
+          severity: "CRITICAL",
+          category: "Content Boundaries",
+          message: "Prohibited term detected: big bang proved"
+        });
 
         }
 
