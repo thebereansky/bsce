@@ -1617,7 +1617,22 @@ function testShortsProductionEngine() {
 
 function testShortsVideoFactory() {
 
-  generateShortsVideoPackage();
+  const result =
+    generateShortsVideoPackage();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
 
 }
 
