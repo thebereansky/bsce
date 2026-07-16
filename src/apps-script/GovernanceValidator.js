@@ -240,11 +240,71 @@ function validateAgainstQualityStandards(
   qualityStandards
 ) {
 
+  const findings = [];
+
+  const assetType =
+
+    assetContent.assetType ||
+
+    "masterStudy";
+
+  const requiredSections =
+
+    getRequiredSections(
+      assetType
+    );
+
+  requiredSections
+    .forEach(function(section) {
+
+      const value =
+        assetContent[section];
+
+      const missing =
+
+        value === undefined ||
+
+        value === null ||
+
+        value === "" ||
+
+        (
+          Array.isArray(value) &&
+          value.length === 0
+        );
+
+      if (missing) {
+
+        findings.push({
+
+          severity:
+            "MAJOR",
+
+          category:
+            "Quality",
+
+          message:
+            "Missing required section: " +
+            section
+
+        });
+
+      }
+
+    });
+
   return {
 
-    score: 100,
+    score:
 
-    findings: []
+      findings.length > 0
+
+        ? 75
+
+        : 100,
+
+    findings:
+      findings
 
   };
 
