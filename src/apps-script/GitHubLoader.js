@@ -1,9 +1,29 @@
 /**
  * GitHub Loader Utilities
- * Version 1.0
+ * Version 1.1
  *
  * Centralized GitHub content loading.
  */
+
+
+/**
+ * Build GitHub Raw URL
+ */
+function buildGitHubUrl(
+  path
+) {
+
+  return (
+
+    BSCE_CONFIG.GITHUB_RAW_BASE_URL +
+
+    "/" +
+
+    path
+
+  );
+
+}
 
 
 /**
@@ -17,7 +37,9 @@ function loadJsonFromGitHub(
     UrlFetchApp.fetch(url);
 
   return JSON.parse(
+
     response.getContentText()
+
   );
 
 }
