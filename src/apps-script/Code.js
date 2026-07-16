@@ -1319,3 +1319,39 @@ function testProhibitedTermsValidation() {
   );
 
 }
+
+function testRequiredSectionsValidation() {
+
+  const result =
+
+    validateGovernance(
+
+      "masterStudy",
+
+      {
+
+        assetType:
+          "masterStudy",
+
+        title:
+          "Incomplete Study"
+
+      }
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
