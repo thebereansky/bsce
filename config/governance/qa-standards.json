@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+
+  "minimumScores": {
+
+    "masterStudy": 85,
+    "familyGuide": 85,
+    "lessonSeries": 85,
+    "lessonScript": 85,
+    "workbook": 85,
+    "marketing": 80
+
+  },
+
+  "evaluationCriteria": [
+
+    {
+      "name": "Scripture Fidelity",
+      "weight": 25
+    },
+
+    {
+      "name": "Governance Compliance",
+      "weight": 20
+    },
+
+    {
+      "name": "Cosmology Compliance",
+      "weight": 15
+    },
+
+    {
+      "name": "Educational Value",
+      "weight": 15
+    },
+
+    {
+      "name": "Clarity",
+      "weight": 10
+    },
+
+    {
+      "name": "Family Friendliness",
+      "weight": 10
+    },
+
+    {
+      "name": "Completeness",
+      "weight": 5
+    }
+
+  ]
+
+}
