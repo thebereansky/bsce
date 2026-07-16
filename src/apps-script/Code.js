@@ -1576,3 +1576,21 @@ function testVideoSeriesPrototype() {
 
 }
 
+function testShortsPrototype() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      buildShortsPrototype(),
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
+
