@@ -1,9 +1,9 @@
 /**
  * KDP Book Generator
- * Version 2.0
+ * Version 3.0
  *
- * Generates a complete KDP-ready
- * book object from study assets.
+ * Generates a complete
+ * KDP-ready book object.
  */
 
 function buildKDPBook() {
@@ -25,11 +25,6 @@ function buildKDPBook() {
       "family-guide"
     );
 
-  const lessonSeries =
-    loadOrGenerateAsset(
-      "lesson-series"
-    );
-
   return {
 
     title:
@@ -39,21 +34,16 @@ function buildKDPBook() {
       "A Berean Sky Study",
 
     introduction:
-      masterStudy.introduction || "",
+      masterStudy
+        .introduction || "",
 
     bigQuestion:
-      masterStudy.bigQuestion || "",
-
-    keyTakeaways:
-      masterStudy.keyTakeaways || [],
-
-    supportingScriptures:
-      masterStudy.supportingScriptures || [],
+      masterStudy
+        .bigQuestion || "",
 
     chapters:
-      buildKDPChapters(
-        masterStudy,
-        lessonSeries
+      buildRichKDPChapters(
+        masterStudy
       ),
 
     familyGuide:
@@ -88,53 +78,247 @@ function buildKDPBook() {
 
 
 /**
- * Converts lesson series
- * into book chapters.
+ * Builds richer chapter structure
+ * from Master Study content.
  */
-function buildKDPChapters(
-  masterStudy,
-  lessonSeries
+function buildRichKDPChapters(
+  masterStudy
 ) {
 
-  const chapters = [];
+  return [
+
+    {
+
+      chapterNumber: 1,
+
+      title:
+        "The Big Question",
+
+      content:
+        masterStudy
+          .bigQuestion || ""
+
+    },
+
+    {
+
+      chapterNumber: 2,
+
+      title:
+        "Scripture Investigation",
+
+      content:
+        masterStudy
+          .scriptureInvestigation || ""
+
+    },
+
+    {
+
+      chapterNumber: 3,
+
+      title:
+        "Supporting Scriptures",
+
+      content:
+        formatSupportingScriptures(
+          masterStudy
+            .supportingScriptures
+        )
+
+    },
+
+    {
+
+      chapterNumber: 4,
+
+      title:
+        "Creation Connections",
+
+      content:
+        (
+          masterStudy
+            .creationConnections || []
+        ).join("\n\n")
+
+    },
+
+    {
+
+      chapterNumber: 5,
+
+      title:
+        "Teaching Points",
+
+      content:
+        formatTeachingPoints(
+          masterStudy
+            .teachingPoints
+        )
+
+    },
+
+    {
+
+      chapterNumber: 6,
+
+      title:
+        "Reflection Questions",
+
+      content:
+        (
+          masterStudy
+            .reflectionQuestions || []
+        ).join("\n\n")
+
+    },
+
+    {
+
+      chapterNumber: 7,
+
+      title:
+        "Family Discussion",
+
+      content:
+        (
+          masterStudy
+            .familyDiscussionQuestions || []
+        ).join("\n\n")
+
+    },
+
+    {
+
+      chapterNumber: 8,
+
+      title:
+        "Application",
+
+      content:
+        (
+          masterStudy
+            .application || []
+        ).join("\n\n")
+
+    },
+
+    {
+
+      chapterNumber: 9,
+
+      title:
+        "Key Takeaways",
+
+      content:
+        (
+          masterStudy
+            .keyTakeaways || []
+        ).join("\n\n")
+
+    }
+
+  ];
+
+}
+
+
+/**
+ * Formats teaching points.
+ */
+function formatTeachingPoints(
+  teachingPoints
+) {
 
   if (
-    !lessonSeries ||
-    !lessonSeries.lessons
+    !teachingPoints ||
+    !teachingPoints.length
   ) {
 
-    return chapters;
+    return "";
 
   }
 
-  lessonSeries.lessons.forEach(
-    function(lesson, index) {
+  let content = "";
 
-      chapters.push({
+  teachingPoints.forEach(
+    function(point) {
 
-        chapterNumber:
-          index + 1,
+      content +=
+        point.title +
+        "\n\n";
 
-        title:
-          lesson.title || (
-            "Lesson " +
-            (index + 1)
-          ),
-
-        summary:
-          lesson.summary || "",
-
-        content:
-          lesson.content ||
-          lesson.summary ||
+      content +=
+        (
+          point.explanation ||
           ""
+        ) +
+        "\n\n";
 
-      });
+      content +=
+        "Supporting Scripture:\n";
+
+      content +=
+        (
+          point.supportingScripture ||
+          ""
+        ) +
+        "\n\n";
+
+      content +=
+        "Creation Connection:\n";
+
+      content +=
+        (
+          point.creationConnection ||
+          ""
+        ) +
+        "\n\n";
 
     }
   );
 
-  return chapters;
+  return content;
+
+}
+
+
+/**
+ * Formats supporting scriptures.
+ */
+function formatSupportingScriptures(
+  scriptures
+) {
+
+  if (
+    !scriptures ||
+    !scriptures.length
+  ) {
+
+    return "";
+
+  }
+
+  let content = "";
+
+  scriptures.forEach(
+    function(scripture) {
+
+      content +=
+        scripture.reference +
+        "\n";
+
+      content +=
+        (
+          scripture.explanation ||
+          ""
+        ) +
+        "\n\n";
+
+    }
+  );
+
+  return content;
 
 }
 
@@ -155,7 +339,8 @@ function estimateKDPPageCount(
         chapter.content || "";
 
       wordCount +=
-        content.split(/\s+/)
+        content
+          .split(/\s+/)
           .length;
 
     }
@@ -179,9 +364,23 @@ function testKDPBook() {
   Logger.log(
 
     JSON.stringify(
+
       book,
+
       null,
+
       2
+
+    )
+
+  );
+
+  Logger.log(
+
+    "Estimated Pages: " +
+
+    estimateKDPPageCount(
+      book
     )
 
   );
