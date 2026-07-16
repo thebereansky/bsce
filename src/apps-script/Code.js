@@ -1275,3 +1275,41 @@ function testPublishingReadiness() {
   );
 
 }
+
+function testProhibitedTermsValidation() {
+
+  const asset = {
+
+    title:
+      "Test",
+
+    content:
+      "The Big Bang proved the universe began billions of years ago."
+
+  };
+
+  const result =
+
+    validateGovernance(
+
+      "masterStudy",
+
+      asset
+
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      result,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
