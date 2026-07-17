@@ -1744,3 +1744,9 @@ function testVoiceProfiles() {
   );
 
 }
+
+function testColoringPage() {
+
+  generateColoringPage();
+
+}
