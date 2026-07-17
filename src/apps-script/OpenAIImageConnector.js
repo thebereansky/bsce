@@ -23,13 +23,15 @@ function generateImage(
   }
 
   const payload = {
-
+  
     model: "gpt-image-1",
-
+  
     prompt: prompt,
-
-    size: "1024x1536"
-
+  
+    size: "1024x1536",
+  
+    quality: "medium"
+  
   };
 
   const response =
