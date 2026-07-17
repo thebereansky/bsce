@@ -1843,3 +1843,23 @@ function testCanonicalStudyAnalyzer() {
   );
 
 }
+
+function testTrackCurriculum() {
+
+  const curriculum =
+    generateTrackCurriculum();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      curriculum,
+
+      null,
+      2
+
+    )
+
+  );
+
+}
