@@ -1826,3 +1826,20 @@ function testStudyContext() {
   );
 
 }
+
+function testCanonicalStudyAnalyzer() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      analyzeStudy(),
+
+      null,
+      2
+
+    )
+
+  );
+
+}
