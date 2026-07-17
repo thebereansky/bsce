@@ -71,6 +71,25 @@
       "name": "Email Campaign",
       "category": "Marketing Asset",
       "revenueGenerating": false
+    },
+
+    {
+      "id": "coloringBook",
+      "name": "Children's Coloring Book",
+      "category": "KDP Product",
+      "revenueGenerating": true
+    },
+    {
+      "id": "activityBook",
+      "name": "Children's Activity Book",
+      "category": "KDP Product",
+      "revenueGenerating": true
+    },
+    {
+      "id": "printablePack",
+      "name": "Printable Activity Pack",
+      "category": "Digital Product",
+      "revenueGenerating": true
     }
 
   ]
