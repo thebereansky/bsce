@@ -1,14 +1,14 @@
 /**
  * Coloring Page Prompt Generator
- * Version 2.0
+ * Version 3.0
  */
 
 function buildColoringPagePrompt() {
 
-  const study =
-    getActiveStudy();
+  const concepts =
+    getRelevantScripturalConcepts();
 
-  return [
+  const promptParts = [
 
     "Children's coloring book page.",
 
@@ -22,29 +22,34 @@ function buildColoringPagePrompt() {
 
     "Large coloring areas.",
 
-    "Simple educational illustration.",
-
     "Printable KDP interior.",
 
     "Ages 5-10.",
 
     "Scripture-first imagery.",
 
-    "Derived from biblical descriptions.",
+    "Educational biblical illustration.",
 
     "Earth-based viewpoint.",
 
-    "Educational biblical cosmology.",
-
     "Child-friendly.",
 
-    "Simple composition.",
+    "Simple composition."
 
-    "High quality coloring book artwork.",
+  ];
 
-    "Study Title: " +
-      study.study.title
+  concepts.forEach(
+    function(concept) {
 
-  ].join(" ");
+      promptParts.push(
+        concept
+      );
+
+    }
+  );
+
+  return promptParts.join(
+    " "
+  );
 
 }
