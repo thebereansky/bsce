@@ -1,0 +1,197 @@
+# BSCE Governance
+
+Version: 1.0
+
+Status: Active
+
+---
+
+# Purpose
+
+The Berean Sky Content Engine (BSCE) is designed to create biblically faithful educational content from a single canonical Study definition.
+
+Governance exists to ensure all generated content remains:
+
+- Biblically faithful
+- Consistent
+- Traceable
+- Educational
+- Publishable
+
+---
+
+# Governance Hierarchy
+
+When conflicts occur, governance should be applied in the following order:
+
+1. Scripture
+2. BSCE Governance
+3. Study Definition
+4. Brand Identity
+5. Content Boundaries
+6. Visual Governance
+7. Research Governance
+8. Quality Standards
+9. Publishing Standards
+10. Asset-Specific Requirements
+
+---
+
+# Core Principles
+
+## Single Source of Truth
+
+The canonical Study definition is the source of truth for all generated assets.
+
+All generated content should derive from the Study definition whenever possible.
+
+---
+
+## Governance First
+
+All generated content must comply with:
+
+- Brand Identity
+- Content Boundaries
+- Visual Governance
+- Research Governance
+- Quality Standards
+- Publishing Standards
+
+before publication.
+
+---
+
+## Scripture-First Generation Principle
+
+Whenever possible, BSCE should derive:
+
+- imagery
+- illustrations
+- scene descriptions
+- storyboards
+- educational visuals
+- diagrams
+- animations
+
+from the actual language of Scripture.
+
+Scriptural descriptions should be preferred over:
+
+- modern conventions
+- institutional imagery
+- culturally assumed visual models
+- theoretical cosmological models
+
+When Scripture provides descriptive language, that language should become the primary source for content generation.
+
+---
+
+## Scripture-First Visual Generation Principle
+
+Visual content should favor:
+
+- scriptural descriptions
+- earth-based observation
+- biblical terminology
+- educational illustrations
+
+over modern cosmological assumptions.
+
+When generating visual content, BSCE should first seek relevant scriptural concepts before constructing prompts.
+
+---
+
+## Research Governance Principle
+
+Scripture is the highest authority.
+
+Research may supplement Scripture but may not override Scripture.
+
+Observations should be distinguished from interpretations.
+
+Interpretations should be distinguished from theories.
+
+Theories should not be presented as established fact.
+
+---
+
+## Automation First
+
+BSCE should automate repetitive content generation whenever possible.
+
+Human approval is required before publication.
+
+---
+
+## Content Lineage Principle
+
+Every generated asset should retain:
+
+- Series
+- Track
+- Study
+- Lesson (when applicable)
+
+metadata.
+
+All content should remain traceable to its source Study.
+
+---
+
+## Human Review Principle
+
+Generated content is considered draft content until reviewed and approved by a human.
+
+No content should be published automatically.
+
+---
+
+# Governance Files
+
+BSCE currently uses the following governance assets:
+
+- brand-identity.json
+- content-boundaries.json
+- quality-standards.json
+- publishing-standards.json
+- visual-governance.json
+- research-governance.json
+- scriptural-visual-concepts.json
+
+These files collectively define acceptable content, imagery, research sources, quality requirements, and publishing requirements.
+
+---
+
+# Future Governance Areas
+
+Potential future governance systems:
+
+- Children's Content Governance
+- KDP Publishing Governance
+- Video Production Governance
+- Marketing Governance
+- AI Safety Governance
+- Citation Governance
+
+---
+
+# Governance Philosophy
+
+Governance should guide content generation through positive instruction whenever possible.
+
+Preferred content should be defined before prohibited content.
+
+BSCE should prioritize:
+
+- Biblical faithfulness
+- Educational value
+- Consistency
+- Clarity
+- Transparency
+
+over optimization for engagement, trends, or popularity.
+
+---
+
+# End of Document
