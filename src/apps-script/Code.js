@@ -1806,3 +1806,23 @@ function testCanonicalProductPlanRepository() {
   );
 
 }
+
+function testStudyContext() {
+
+  Logger.log(
+    JSON.stringify(
+      getCurrentStudy(),
+      null,
+      2
+    )
+  );
+
+  Logger.log(
+    JSON.stringify(
+      getActiveStudy(),
+      null,
+      2
+    )
+  );
+
+}
