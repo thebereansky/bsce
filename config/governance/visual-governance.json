@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+
+  "requiredPrinciples": [
+
+    "Use observational viewpoints",
+
+    "Favor earth-based human observation",
+
+    "Favor scriptural descriptions",
+
+    "Favor biblical environments"
+
+  ],
+
+  "prohibitedVisualConcepts": [
+
+    "earth from space",
+
+    "globe earth",
+
+    "nasa imagery",
+
+    "satellite imagery",
+
+    "solar system diagram",
+
+    "astronaut perspective",
+
+    "planet earth in space",
+
+    "space shuttle",
+
+    "international space station"
+
+  ]
+}
