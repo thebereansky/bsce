@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+
+  "researchPrinciples": [
+
+    "Scripture is the highest authority",
+
+    "Scripture takes precedence over scientific consensus",
+
+    "Scripture takes precedence over institutional claims",
+
+    "Favor observational evidence",
+
+    "Favor direct observation",
+
+    "Clearly distinguish observation from interpretation",
+
+    "Clearly distinguish Scripture from theory"
+
+  ],
+
+  "approvedResearchCategories": [
+
+    "Biblical studies",
+
+    "Historical astronomy",
+
+    "Observational astronomy",
+
+    "Geocentric cosmology",
+
+    "Earth-centered cosmology",
+
+    "History of science",
+
+    "Ancient cosmology",
+
+    "Scriptural cosmology",
+
+    "Amateur astronomical observation"
+
+  ],
+
+  "prohibitedAuthorityAppeals": [
+
+    "NASA says",
+
+    "settled science proves",
+
+    "the science is settled",
+
+    "trust the experts",
+
+    "scientific consensus proves"
+
+  ]
+}
