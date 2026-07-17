@@ -1883,3 +1883,23 @@ function testSeriesCurriculum() {
   );
 
 }
+
+function testSeriesCurriculumRepository() {
+
+  const curriculum =
+    getSeriesCurriculum();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      curriculum,
+
+      null,
+      2
+
+    )
+
+  );
+
+}
