@@ -1,31 +1,12 @@
 /**
  * Series Curriculum Repository
- * Version 1.0
+ * Version 2.0
  */
 
 function getSeriesCurriculum() {
 
-  const study =
-    getActiveStudy();
-
   const folder =
-    getStudySubfolder(
-
-      buildSeriesFolderName(
-        study
-      ),
-
-      buildTrackFolderName(
-        study
-      ),
-
-      buildStudyFolderName(
-        study
-      ),
-
-      "05 - Production"
-
-    );
+    getSeriesRootFolder();
 
   const files =
     folder.getFilesByName(
