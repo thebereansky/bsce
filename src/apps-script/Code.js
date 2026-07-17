@@ -1935,3 +1935,55 @@ function testSeriesRootFolder() {
   );
 
 }
+
+function testTrackDefinitions() {
+
+  generateTrackDefinitions();
+
+}
+
+function testTrackDefinitionRepository() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      getTrackDefinition(
+        "001"
+      ),
+
+      null,
+      2
+
+    )
+
+  );
+
+}
+
+function testStudyDefinitions() {
+
+  generateStudyDefinitions(
+    "001"
+  );
+
+}
+
+function testStudyDefinitionRepository() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      getStudyDefinitionById(
+        "001"
+      ),
+
+      null,
+      2
+
+    )
+
+  );
+
+}
