@@ -28,7 +28,7 @@ function generateImage(
 
     prompt: prompt,
 
-    size: "1024x1792"
+    size: "1024x1536"
 
   };
 
