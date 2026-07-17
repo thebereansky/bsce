@@ -85,3 +85,41 @@ function saveCurrentStudyFile(
   );
 
 }
+
+/**
+ * Saves content to the
+ * 01 - Series folder.
+ */
+function saveSeriesRootFile(
+  content,
+  filename
+) {
+
+  const folder =
+    getSeriesRootFolder();
+
+  const files =
+    folder.getFilesByName(
+      filename
+    );
+
+  if (
+    files.hasNext()
+  ) {
+
+    files.next()
+      .setContent(
+        content
+      );
+
+    return;
+
+  }
+
+  folder.createFile(
+    filename,
+    content,
+    MimeType.PLAIN_TEXT
+  );
+
+}
