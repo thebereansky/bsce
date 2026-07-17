@@ -2,36 +2,38 @@
   "version": "1.0",
 
   "requiredPrinciples": [
-
-    "Use observational viewpoints",
-
-    "Favor earth-based human observation",
-
     "Favor scriptural descriptions",
+    "Favor observational viewpoints",
+    "Favor earth-based human perspectives",
+    "Favor biblical terminology",
+    "Favor biblical environments",
+    "Favor educational illustrations"
+  ],
 
-    "Favor biblical environments"
-
+  "requiredPromptElements": [
+    "earth-based viewpoint",
+    "human observation",
+    "biblical setting",
+    "scripture-consistent imagery"
   ],
 
   "prohibitedVisualConcepts": [
-
     "earth from space",
-
+    "planet earth from orbit",
     "globe earth",
-
-    "nasa imagery",
-
-    "satellite imagery",
-
-    "solar system diagram",
-
-    "astronaut perspective",
-
-    "planet earth in space",
-
+    "round earth in space",
+    "astronaut",
     "space shuttle",
-
-    "international space station"
-
+    "international space station",
+    "satellite imagery",
+    "nasa imagery",
+    "solar system diagram",
+    "heliocentric model",
+    "planetary orbit diagram",
+    "galaxy view",
+    "milky way from space",
+    "deep space telescope",
+    "cosmic background radiation",
+    "big bang visualization"
   ]
 }
