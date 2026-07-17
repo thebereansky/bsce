@@ -1703,3 +1703,44 @@ function testVisualGovernance() {
   );
 
 }
+
+function testVoiceProfiles() {
+
+  const text =
+    "The heavens declare the glory of God.";
+
+  const voices = [
+
+    "alloy",
+    "echo",
+    "fable",
+    "nova",
+    "shimmer",
+    "onyx"
+
+  ];
+
+  voices.forEach(
+    function(voice) {
+
+      const blob =
+        generateSpeech(
+
+          text,
+
+          voice + ".mp3",
+
+          voice
+
+        );
+
+      DriveApp
+        .getRootFolder()
+        .createFile(
+          blob
+        );
+
+    }
+  );
+
+}
