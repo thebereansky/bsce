@@ -1651,3 +1651,14 @@ function testShortVoiceover() {
   );
 
 }
+
+function testShortAssets() {
+
+  const shorts =
+    buildShorts();
+
+  generateShortAssets(
+    shorts[0]
+  );
+
+}
