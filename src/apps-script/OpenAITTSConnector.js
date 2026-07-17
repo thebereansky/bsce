@@ -5,7 +5,8 @@
 
 function generateSpeech(
   text,
-  filename
+  filename,
+  voice
 ) {
 
   const apiKey =
@@ -27,7 +28,8 @@ function generateSpeech(
 
     model: "gpt-4o-mini-tts",
 
-    voice: "alloy",
+  voice:
+    voice || "alloy",
 
     input: text
 
