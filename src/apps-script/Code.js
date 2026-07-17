@@ -1750,3 +1750,59 @@ function testColoringPage() {
   generateColoringPage();
 
 }
+
+function testStudyConceptExtractor() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      extractStudyConcepts(),
+
+      null,
+      2
+
+    )
+
+  );
+
+}
+
+
+function testCanonicalProductPlan() {
+
+  const plan =
+    saveCanonicalProductPlan();
+
+  Logger.log(
+
+    JSON.stringify(
+
+      plan,
+
+      null,
+      2
+
+    )
+
+  );
+
+}
+
+
+function testCanonicalProductPlanRepository() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      getCanonicalProductPlan(),
+
+      null,
+      2
+
+    )
+
+  );
+
+}
