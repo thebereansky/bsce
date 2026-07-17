@@ -1662,3 +1662,44 @@ function testShortAssets() {
   );
 
 }
+
+function testVisualGovernance() {
+
+  const scene = {
+
+    sceneNumber: 1,
+
+    videoPrompt:
+      "A biblical landscape at sunrise"
+
+  };
+
+  const prompt =
+    buildGovernedImagePrompt(
+      scene
+    );
+
+  Logger.log(
+    prompt
+  );
+
+  const validation =
+    validateVisualPrompt(
+      prompt
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+
+      validation,
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
