@@ -1923,3 +1923,15 @@ function testSeriesCurriculum() {
   );
 
 }
+
+function testSeriesRootFolder() {
+
+  const folder =
+    getSeriesRootFolder();
+
+  Logger.log(
+    "Folder Name: " +
+    folder.getName()
+  );
+
+}
