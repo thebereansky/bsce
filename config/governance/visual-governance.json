@@ -1,39 +1,106 @@
 {
-  "version": "1.0",
+  "version": "2.0",
 
-  "requiredPrinciples": [
-    "Favor scriptural descriptions",
-    "Favor observational viewpoints",
-    "Favor earth-based human perspectives",
-    "Favor biblical terminology",
-    "Favor biblical environments",
-    "Favor educational illustrations"
+  "visualGenerationPrinciples": [
+
+    "Scripture First Visual Generation",
+
+    "Derive imagery from the language of Scripture whenever possible",
+
+    "Favor scriptural descriptions over modern assumptions",
+
+    "Favor observational viewpoints over theoretical models",
+
+    "Favor earth-based human observation",
+
+    "Favor educational and explanatory imagery",
+
+    "Favor imagery consistent with Berean Sky governance"
+
   ],
 
-  "requiredPromptElements": [
+  "requiredVisualElements": [
+
     "earth-based viewpoint",
+
     "human observation",
-    "biblical setting",
-    "scripture-consistent imagery"
+
+    "scripture-consistent imagery",
+
+    "educational presentation"
+
+  ],
+
+  "preferredVisualConcepts": [
+
+    "biblical landscapes",
+
+    "observational astronomy",
+
+    "high zoom astrophotography",
+
+    "amateur astronomical observation",
+
+    "high altitude balloons",
+
+    "atmospheric observation platforms",
+
+    "stars observed from earth",
+
+    "sun observed from earth",
+
+    "moon observed from earth",
+
+    "firmament observation",
+
+    "educational illustration",
+
+    "diagrammatic teaching visuals"
+
+  ],
+
+  "interpretiveVisualConcepts": [
+
+    "earth viewed from high altitude",
+
+    "firmament-centered cosmology",
+
+    "geocentric celestial models",
+
+    "ice boundary concepts",
+
+    "earth-centered observational astronomy"
+
   ],
 
   "prohibitedVisualConcepts": [
+
     "earth from space",
+
     "planet earth from orbit",
-    "globe earth",
-    "round earth in space",
-    "astronaut",
+
+    "astronaut perspective",
+
     "space shuttle",
+
     "international space station",
-    "satellite imagery",
-    "nasa imagery",
-    "solar system diagram",
-    "heliocentric model",
+
+    "satellite orbiting earth",
+
     "planetary orbit diagram",
-    "galaxy view",
-    "milky way from space",
-    "deep space telescope",
-    "cosmic background radiation",
-    "big bang visualization"
+
+    "heliocentric model",
+
+    "solar system diagram",
+
+    "big bang visualization",
+
+    "cosmic evolution diagram",
+
+    "galaxy viewed from deep space",
+
+    "nasa style earth imagery",
+
+    "deep space telescope perspective"
   ]
 }
