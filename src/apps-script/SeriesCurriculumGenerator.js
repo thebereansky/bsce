@@ -17,14 +17,12 @@ function generateSeriesCurriculum() {
       prompt
     );
 
-  saveCurrentStudyFile(
-
+  saveSeriesRootFile(
+  
     response,
-
-    "series-curriculum-plan.json",
-
-    "05 - Production"
-
+  
+    "series-curriculum-plan.json"
+  
   );
 
   Logger.log(
