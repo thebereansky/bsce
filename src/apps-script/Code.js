@@ -2054,3 +2054,9 @@ function testYouTubeFolderCreation() {
   );
 
 }
+
+function testStudyDefinitionProvisioning() {
+
+  provisionStudyDefinitions();
+
+}
