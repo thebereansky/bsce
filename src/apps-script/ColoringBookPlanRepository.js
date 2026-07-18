@@ -1,15 +1,33 @@
 /**
  * Coloring Book Plan Repository
- * Version 1.0
+ * Version 2.0
  */
 
 function getColoringBookPlan() {
 
+  const folder =
+    getOrCreateStudySubfolder(
+
+      buildSeriesFolderName(
+        getActiveStudy()
+      ),
+
+      buildTrackFolderName(
+        getActiveStudy()
+      ),
+
+      buildStudyFolderName(
+        getActiveStudy()
+      ),
+
+      "07 - Children's Materials"
+
+    );
+
   const files =
-    getCurrentStudyFolder()
-      .getFilesByName(
-        "coloring-book-plan.json"
-      );
+    folder.getFilesByName(
+      "coloring-book-plan.json"
+    );
 
   if (
     !files.hasNext()
@@ -26,6 +44,30 @@ function getColoringBookPlan() {
     files.next()
       .getBlob()
       .getDataAsString()
+
+  );
+
+}
+
+
+/**
+ * Save Coloring Book Plan
+ */
+function saveColoringBookPlan(
+  plan
+) {
+
+  saveCurrentStudyFile(
+
+    JSON.stringify(
+      plan,
+      null,
+      2
+    ),
+
+    "coloring-book-plan.json",
+
+    "07 - Children's Materials"
 
   );
 
