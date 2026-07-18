@@ -1,22 +1,22 @@
 /**
  * Study Definition Generator
- * Version 1.0
+ * Version 2.0
  */
 
 function generateStudyDefinitions(
-  trackId
+  trackSlug
 ) {
 
   const track =
     getTrackDefinition(
-      trackId
+      trackSlug
     );
 
   track.studies.forEach(
     function(study) {
 
       saveStudyDefinition(
-        trackId,
+        trackSlug,
         study
       );
 
