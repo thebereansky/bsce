@@ -1,18 +1,114 @@
 {
-  "mission": "Help people explore God's creation through Scripture.",
+  "version": "2.0",
+  "status": "Active",
+
+  "mission": "The Berean Sky exists to help people understand, explore, and appreciate the true nature of God's creation through the truth of Scripture, leading them toward greater wonder, worship, and faith in God.",
 
   "productGoals": [
     "Magnify the glory of God",
-    "Encourage wonder at creation",
+    "Encourage wonder at God's creation",
     "Teach Scripture faithfully",
-    "Present biblical cosmology clearly",
-    "Create engaging educational experiences"
+    "Present the true nature of God's creation as described in Scripture",
+    "Strengthen faith in God",
+    "Equip families, children, and adults to explore Scripture together",
+    "Create engaging educational experiences",
+    "Produce professional commercial products"
+  ],
+
+  "productPrinciples": [
+    "Scripture first",
+    "Creation focused",
+    "Wonder inspiring",
+    "Educationally valuable",
+    "Commercially professional",
+    "Visually engaging",
+    "Faith strengthening",
+    "Biblically faithful"
   ],
 
   "coverPrinciples": [
     "Focus on God's creation",
     "Focus on beauty and wonder",
+    "Focus on the majesty and glory of God",
     "Avoid internal curriculum terminology",
-    "Present professional commercial products"
+    "Present professional commercial products",
+    "Inspire curiosity and exploration",
+    "Appeal to broad Christian audiences"
+  ],
+
+  "contentPrinciples": [
+    "Every product should be traceable to Scripture",
+    "Every product should encourage appreciation of God's creation",
+    "Every product should promote biblical literacy",
+    "Every product should be accessible to its intended audience",
+    "Every product should reinforce the mission of The Berean Sky"
+  ],
+
+  "audiencePrinciples": {
+    "children": [
+      "Simple language",
+      "Large visual elements",
+      "Encourage curiosity",
+      "Encourage Scripture engagement"
+    ],
+
+    "families": [
+      "Encourage discussion",
+      "Support family discipleship",
+      "Create shared learning experiences"
+    ],
+
+    "adults": [
+      "Encourage deeper study",
+      "Promote biblical exploration",
+      "Strengthen understanding of Scripture"
+    ]
+  },
+
+  "commercialProductStandards": {
+    "hideInternalCurriculumNames": true,
+    "showBereanSkyBranding": true,
+    "includeCrossPromotion": true,
+    "maintainProfessionalQuality": true,
+    "focusOnCustomerValue": true
+  },
+
+  "coloringBookStandards": {
+    "includeScriptureReferenceOnEveryPage": true,
+    "includeBorderOnEveryPage": true,
+    "pageSize": "8.5x11",
+    "singleSidedPrinting": true,
+    "minimumPageCount": 32,
+    "targetAgeRange": "5-10",
+
+    "artRequirements": [
+      "Black and white line art",
+      "Bold clean outlines",
+      "Large coloring areas",
+      "No shading",
+      "No grayscale",
+      "Child friendly",
+      "Scripture aligned",
+      "Professional coloring book quality"
+    ]
+  },
+
+  "marketingPrinciples": [
+    "Lead with Scripture",
+    "Lead with wonder",
+    "Lead with creation",
+    "Lead with educational value",
+    "Avoid sensationalism",
+    "Avoid controversy-driven messaging",
+    "Promote exploration through Scripture"
+  ],
+
+  "successDefinition": [
+    "People better understand Scripture",
+    "People better understand God's creation",
+    "People experience greater wonder",
+    "People grow in faith",
+    "People are encouraged to worship God",
+    "People seek deeper study of Scripture"
   ]
 }
