@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "lastUpdated": "2026-07-15",
+  "version": "1.2",
+  "lastUpdated": "2026-07-18",
 
   "description": "Authoritative registry for all BSCE governance sources.",
 
@@ -8,6 +8,9 @@
 
     "brandIdentity":
       "config/governance/brand-identity.json",
+
+    "productPhilosophy":
+      "config/governance/product-philosophy.json",
 
     "contentBoundaries":
       "config/content-boundaries.json",
