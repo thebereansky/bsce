@@ -2211,3 +2211,9 @@ function testGeneratePageManifests() {
   );
 
 }
+
+function testGenerateColoringBookImages() {
+
+  generateColoringBookImages();
+
+}
