@@ -218,3 +218,21 @@ function testGovernanceContext() {
   );
 
 }
+
+/**
+ * Product Philosophy
+ */
+function getProductPhilosophy() {
+
+  const path =
+    loadGovernanceSource(
+      "productPhilosophy"
+    );
+
+  return loadJsonFromGitHub(
+
+    buildGitHubUrl(path)
+
+  );
+
+}
