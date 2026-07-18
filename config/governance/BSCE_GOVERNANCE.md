@@ -211,6 +211,7 @@ Potential future governance systems:
 - KDP Publishing Governance
 - Video Production Governance
 - Marketing Governance
+- Product Philosophy Governance
 - AI Safety Governance
 - Citation Governance
 
