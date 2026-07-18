@@ -1,0 +1,24 @@
+/**
+ * Coloring Book Plan Writer
+ * Version 1.0
+ */
+
+function saveColoringBookPlan(
+  plan
+) {
+
+  saveCurrentStudyFile(
+
+    JSON.stringify(
+      plan,
+      null,
+      2
+    ),
+
+    "coloring-book-plan.json",
+
+    "07 - Children's Materials"
+
+  );
+
+}
