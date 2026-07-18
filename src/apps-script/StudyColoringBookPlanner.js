@@ -1,6 +1,6 @@
 /**
  * Study Coloring Book Planner
- * Version 2.0
+ * Version 3.0
  *
  * Creates a complete coloring
  * book plan for a Study.
@@ -55,6 +55,10 @@ function buildStudyColoringBookPlan() {
 
 }
 
+
+/**
+ * Prototype book structure.
+ */
 function buildPrototypeBookPages(
   study
 ) {
@@ -81,60 +85,61 @@ function buildPrototypeBookPages(
       pageType: "SCRIPTURE_SCENE",
       title: "In the Beginning",
       scripture: "Genesis 1:1",
-    
+
       visualDescription:
-        "Earth-based view of God's creation. Land, waters, sky. No globe earth. No space view. No planetary imagery."
+        "Earth-based view of creation. Land, waters, sky. No globe earth. No planetary imagery. No space view."
     },
-    
+
     {
       pageNumber: 5,
       pageType: "SCRIPTURE_SCENE",
       title: "The Earth Was Without Form",
       scripture: "Genesis 1:2",
-    
+
       visualDescription:
         "Unformed land and waters under darkness. Straight horizon. Earth viewed as land and sea, not as a planet."
     },
-    
+
     {
       pageNumber: 6,
       pageType: "SCRIPTURE_SCENE",
       title: "Let There Be Light",
       scripture: "Genesis 1:3",
-    
+
       visualDescription:
         "Light appearing over the waters. No sun. No moon. No stars. No galaxies. No planets."
     },
-    
+
     {
       pageNumber: 7,
       pageType: "MEMORY_VERSE_PAGE",
       title: "The Heavens Declare the Glory of God",
       scripture: "Psalm 19:1",
-    
+
       visualDescription:
-        "Decorative Scripture page with clouds, birds, mountains, trees, and sky viewed from the earth."
+        "Decorative scripture page with clouds, birds, mountains, trees, and sky viewed from the earth."
     },
-    
+
     {
       pageNumber: 8,
       pageType: "TYPOGRAPHY_PAGE",
       title: "Through Faith We Understand",
       scripture: "Hebrews 11:3",
-    
+
       visualDescription:
         "Decorative biblical typography with creation-themed border and natural elements."
     },
-    
+
     {
       pageNumber: 9,
       pageType: "REFLECTION_PAGE",
       title: "God's Invisible Attributes Are Clearly Seen",
       scripture: "Romans 1:20",
-    
+
       visualDescription:
-        "Majestic landscape showing mountains, trees, rivers, and sky that inspire wonder and worship."
+        "Majestic landscape showing mountains, rivers, trees, and sky that inspire wonder and worship."
     },
+
     {
       pageNumber: 10,
       pageType: "BACK_COVER"
