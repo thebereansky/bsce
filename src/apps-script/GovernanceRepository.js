@@ -173,26 +173,29 @@ function getApprovalThresholds() {
  */
 function buildGovernanceContext() {
 
-  return {
-
+   return {
+  
     brandIdentity:
       getBrandIdentity(),
-
+  
+    productPhilosophy:
+      getProductPhilosophy(),
+  
     contentBoundaries:
       getContentBoundaries(),
-
+  
     cosmologyFramework:
       getCosmologyFramework(),
-
+  
     qualityStandards:
       getQualityStandards(),
-
+  
     publishingStandards:
       getPublishingStandards(),
-
+  
     approvalThresholds:
       getApprovalThresholds()
-
+  
   };
 
 }
