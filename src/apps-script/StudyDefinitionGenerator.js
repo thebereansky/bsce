@@ -73,7 +73,11 @@ function generateStudyDefinitions() {
                 "1.0",
 
               generatedBy:
-                "BSCE"
+                "BSCE",
+
+              generatedOn:
+                new Date()
+                  .toISOString()
 
             }
 
