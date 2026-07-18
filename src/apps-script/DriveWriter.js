@@ -47,7 +47,6 @@ function savePromptToDrive(
 
 }
 
-
 /**
  * Save a file into a specific
  * study subfolder.
@@ -61,14 +60,12 @@ function saveFileToStudySubfolder(
   subfolderName
 ) {
 
-  const root =
-    DriveApp.getFolderById(
-      BSCE_CONFIG.CONTENT_ROOT_FOLDER_ID
-    );
+  const seriesRoot =
+    getSeriesRootFolder();
 
   const seriesFolder =
     getChildFolderByName(
-      root,
+      seriesRoot,
       seriesFolderName
     );
 
@@ -89,6 +86,24 @@ function saveFileToStudySubfolder(
       studyFolder,
       subfolderName
     );
+
+  const files =
+    subfolder.getFilesByName(
+      filename
+    );
+
+  if (
+    files.hasNext()
+  ) {
+
+    files.next()
+      .setContent(
+        content
+      );
+
+    return;
+
+  }
 
   subfolder.createFile(
     filename,
