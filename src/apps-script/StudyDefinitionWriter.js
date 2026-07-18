@@ -1,101 +1,41 @@
 /**
- * EXPERIMENTAL
- * ----------------------------------
- * Generated during curriculum prototype work.
- *
- * DO NOT USE AS AUTHORITATIVE SOURCE.
- *
- * Replaced by:
- * TrackFolderGenerator.js
- * StudyFolderGenerator.js
- *
- * Pending review.
- */
-/**
  * Study Definition Writer
- * Version 2.0
+ * Version 3.0
  *
- * Persists individual study definitions
- * generated from Track Definitions.
+ * Writes canonical study-definition.json
+ * into the appropriate Study folder.
  */
 
 function saveStudyDefinition(
-  trackSlug,
-  study
+  definition
 ) {
 
-  const currentStudy =
-    getActiveStudy();
+  const seriesName =
 
-  const seriesFolder =
-    getSeriesFolder(
-      buildSeriesFolderName(
-        currentStudy
-      )
+    definition.series.id +
+    " - " +
+    definition.series.name;
+
+  const trackName =
+
+    "Track " +
+    definition.track.id +
+    " - " +
+    definition.track.name;
+
+  const studyName =
+
+    "Study " +
+    definition.study.id +
+    " - " +
+    definition.study.title;
+
+  const folder =
+    getStudyFolder(
+      seriesName,
+      trackName,
+      studyName
     );
-
-  const filename =
-
-    "study-" +
-
-    study.id +
-
-    ".json";
-
-  const definition = {
-
-    series:
-      currentStudy.series,
-
-    track: {
-
-      id:
-        trackSlug
-
-    },
-
-    study: {
-
-      id:
-        study.id,
-
-      title:
-        study.title,
-
-      primaryScripture:
-        study.primaryScripture ||
-
-        "",
-
-      bigIdea:
-        study.bigIdea ||
-
-        "",
-
-      themes:
-        study.themes ||
-
-        [],
-
-      learningObjectives:
-        study.learningObjectives ||
-
-        []
-
-    },
-
-    metadata: {
-
-      generatedOn:
-        new Date()
-          .toISOString(),
-
-      generatedBy:
-        "BSCE"
-
-    }
-
-  };
 
   const content =
     JSON.stringify(
@@ -105,8 +45,8 @@ function saveStudyDefinition(
     );
 
   const files =
-    seriesFolder.getFilesByName(
-      filename
+    folder.getFilesByName(
+      "study-definition.json"
     );
 
   if (
@@ -120,22 +60,22 @@ function saveStudyDefinition(
 
     Logger.log(
       "Updated: " +
-      filename
+      studyName
     );
 
     return;
 
   }
 
-  seriesFolder.createFile(
-    filename,
+  folder.createFile(
+    "study-definition.json",
     content,
     MimeType.PLAIN_TEXT
   );
 
   Logger.log(
     "Created: " +
-    filename
+    studyName
   );
 
 }
