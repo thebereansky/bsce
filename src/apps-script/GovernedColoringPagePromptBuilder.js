@@ -155,42 +155,74 @@ function buildGovernedColoringPagePrompt(
   //
 
   switch (
-    page.pageType
-  ) {
+  page.pageType
+) {
 
-    case "SCRIPTURE_SCENE":
+  case "SCRIPTURE_SCENE":
 
-      promptParts.push(
-        "Illustrate the Scripture scene."
-      );
+    promptParts.push(
+      "Illustrate the Scripture scene."
+    );
 
-      break;
+    promptParts.push(
+      "Biblical narrative illustration."
+    );
 
-    case "MEMORY_VERSE_PAGE":
+    break;
 
-      promptParts.push(
-        "Decorative memory verse page."
-      );
+  case "MEMORY_VERSE_PAGE":
 
-      break;
+    promptParts.push(
+      "Large decorative memory verse."
+    );
 
-    case "REFLECTION_PAGE":
+    promptParts.push(
+      "Outline lettering only."
+    );
 
-      promptParts.push(
-        "Wonder and worship themed page."
-      );
+    promptParts.push(
+      "Colorable typography."
+    );
 
-      break;
+    promptParts.push(
+      "Minimal decorative imagery."
+    );
 
-    case "TYPOGRAPHY_PAGE":
+    break;
 
-      promptParts.push(
-        "Large decorative colorable lettering."
-      );
+  case "TYPOGRAPHY_PAGE":
 
-      break;
+    promptParts.push(
+      "Large inspirational Scripture quote."
+    );
 
-  }
+    promptParts.push(
+      "Decorative colorable lettering."
+    );
+
+    promptParts.push(
+      "Elegant biblical artwork."
+    );
+
+    break;
+
+  case "REFLECTION_PAGE":
+
+    promptParts.push(
+      "Wonder of creation."
+    );
+
+    promptParts.push(
+      "Majesty of God."
+    );
+
+    promptParts.push(
+      "Worship themed illustration."
+    );
+
+    break;
+
+}
 
   return promptParts.join(
     " "
