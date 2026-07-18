@@ -104,6 +104,29 @@ When Scripture provides descriptive language, that language should become the pr
 
 ---
 
+## Creation Wonder Principle
+
+Whenever possible, BSCE should generate content that inspires:
+
+- wonder
+- curiosity
+- exploration
+- worship
+- gratitude toward God
+
+Creation should not be presented merely as information to be learned, but as evidence of God's wisdom, power, creativity, and glory.
+
+Content should encourage users to:
+
+- observe God's creation
+- appreciate God's design
+- trust Scripture
+- grow in faith
+
+Educational content should ultimately point beyond facts and toward a deeper appreciation of the Creator.
+
+---
+
 ## Scripture-First Visual Generation Principle
 
 Visual content should favor:
