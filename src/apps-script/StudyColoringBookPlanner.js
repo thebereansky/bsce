@@ -55,14 +55,6 @@ function buildStudyColoringBookPlan() {
 
 }
 
-/**
- * Prototype book structure.
- *
- * Version 2.0
- *
- * Designed as a commercial
- * Berean Sky coloring book.
- */
 function buildPrototypeBookPages(
   study
 ) {
@@ -101,28 +93,29 @@ function buildPrototypeBookPages(
     {
       pageNumber: 6,
       pageType: "SCRIPTURE_SCENE",
-      title: "Darkness Upon the Deep",
-      scripture: "Genesis 1:2"
+      title: "Let There Be Light",
+      scripture: "Genesis 1:3"
     },
 
     {
       pageNumber: 7,
       pageType: "MEMORY_VERSE_PAGE",
-      title: "In the Beginning God Created",
-      scripture: "Genesis 1:1"
-    },
-
-    {
-      pageNumber: 8,
-      pageType: "TYPOGRAPHY_PAGE",
       title: "The Heavens Declare the Glory of God",
       scripture: "Psalm 19:1"
     },
 
     {
+      pageNumber: 8,
+      pageType: "TYPOGRAPHY_PAGE",
+      title: "Through Faith We Understand",
+      scripture: "Hebrews 11:3"
+    },
+
+    {
       pageNumber: 9,
       pageType: "REFLECTION_PAGE",
-      title: "Wonder of Creation"
+      title: "God's Invisible Attributes Are Clearly Seen",
+      scripture: "Romans 1:20"
     },
 
     {
