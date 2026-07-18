@@ -1964,7 +1964,7 @@ function testTrackDefinitionRepository() {
 function testStudyDefinitions() {
 
   generateStudyDefinitions(
-    "001"
+    "foundations"
   );
 
 }
