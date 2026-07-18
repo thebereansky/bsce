@@ -1,36 +1,89 @@
 /**
- * EXPERIMENTAL
- * ----------------------------------
- * Generated during curriculum prototype work.
- *
- * DO NOT USE AS AUTHORITATIVE SOURCE.
- *
- * Replaced by:
- * TrackFolderGenerator.js
- * StudyFolderGenerator.js
- *
- * Pending review.
- */
-/**
  * Study Definition Generator
- * Version 2.0
+ * Version 3.0
+ *
+ * Generates canonical study-definition.json
+ * files from the Series Curriculum.
  */
 
-function generateStudyDefinitions(
-  trackSlug
-) {
+function generateStudyDefinitions() {
 
-  const track =
-    getTrackDefinition(
-      trackSlug
-    );
+  const curriculum =
+    getSeriesCurriculum();
 
-  track.studies.forEach(
-    function(study) {
+  const activeStudy =
+    getActiveStudy();
 
-      saveStudyDefinition(
-        trackSlug,
-        study
+  curriculum.tracks.forEach(
+    function(track) {
+
+      track.studies.forEach(
+        function(study) {
+
+          const definition = {
+
+            series: {
+              id:
+                activeStudy.series.id,
+
+              name:
+                activeStudy.series.name
+            },
+
+            track: {
+              id:
+                track.id,
+
+              slug:
+                track.slug,
+
+              name:
+                track.name
+            },
+
+            study: {
+              id:
+                study.id,
+
+              slug:
+                study.slug,
+
+              title:
+                study.title
+            },
+
+            primaryScripture:
+              study.primaryScripture,
+
+            bigIdea:
+              study.bigIdea,
+
+            themes:
+              study.themes || [],
+
+            learningObjectives:
+              study.learningObjectives || [],
+
+            metadata: {
+
+              status:
+                "Planned",
+
+              version:
+                "1.0",
+
+              generatedBy:
+                "BSCE"
+
+            }
+
+          };
+
+          saveStudyDefinition(
+            definition
+          );
+
+        }
       );
 
     }
