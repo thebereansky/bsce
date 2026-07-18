@@ -2173,3 +2173,9 @@ function testBackCoverManifest() {
   );
 
 }
+
+function testGeneratePageManifests() {
+
+  generateColoringBookPageManifests();
+
+}
