@@ -1,6 +1,6 @@
 /**
  * Study Subfolder Creator
- * Version 1.0
+ * Version 2.0
  */
 
 function createStudySubfolders(
@@ -9,27 +9,27 @@ function createStudySubfolders(
   studyName
 ) {
 
-const folders = [
+  const folders = [
 
-  "02 - Master Study",
+    "02 - Master Study",
 
-  "03 - YouTube",
+    "03 - YouTube",
 
-  "04 - Digital Products",
+    "04 - Digital Products",
 
-  "05 - Production",
+    "05 - Production",
 
-  "05 - Small Group Materials",
+    "05 - Small Group Materials",
 
-  "06 - Posters & Visuals",
+    "06 - Posters & Visuals",
 
-  "07 - Children's Materials",
+    "07 - Children's Materials",
 
-  "08 - Amazon KDP",
+    "08 - Amazon KDP",
 
-  "09 - Marketing"
+    "09 - Marketing"
 
-];
+  ];
 
   folders.forEach(
     function(folderName) {
@@ -47,6 +47,16 @@ const folders = [
       );
 
     }
+  );
+
+  createYouTubeSubfolders(
+
+    seriesName,
+
+    trackName,
+
+    studyName
+
   );
 
 }
