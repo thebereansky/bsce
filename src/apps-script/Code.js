@@ -1987,3 +1987,21 @@ function testStudyDefinitionRepository() {
   );
 
 }
+
+function testTrackFolders() {
+
+  generateTrackFolders();
+
+}
+
+function testStudyFolders() {
+
+  generateStudyFolders();
+
+}
+
+function testCurriculumFolderProvisioning() {
+
+  provisionCurriculumFolders();
+
+}
