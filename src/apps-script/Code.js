@@ -2005,3 +2005,29 @@ function testCurriculumFolderProvisioning() {
   provisionCurriculumFolders();
 
 }
+
+function testProvisionTracks() {
+
+  provisionTracks();
+
+}
+
+function testProvisionStudies() {
+
+  provisionStudies();
+
+}
+
+function testInitializeStudyFolders() {
+
+  initializeStudyFolders();
+
+}
+
+function testProvisionCurriculum() {
+
+  provisionCurriculum();
+
+  initializeStudyFolders();
+
+}
