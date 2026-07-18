@@ -1,34 +1,66 @@
 {
+  "version": "2.0",
+  "status": "Active",
+
   "brandName": "The Berean Sky",
 
-  "tagline":
-    "Searching the Scriptures. Exploring Creation.",
+  "tagline": "Searching the Scriptures. Exploring Creation.",
 
-  "purpose":
-    "Help people explore God's creation through Scripture.",
+  "purpose": "Help people understand, explore, and appreciate the true nature of God's creation through the truth of Scripture.",
 
-  "mission":
-    "Create biblically faithful, engaging, and accessible educational resources.",
+  "mission": "Create biblically faithful, engaging, and accessible educational resources that inspire wonder, strengthen faith, and encourage deeper exploration of God's creation through Scripture.",
 
-  "vision":
-    "Become a trusted resource for exploring Scripture and creation.",
+  "vision": "Become the most trusted resource for helping people understand the true nature of God's creation through the truth of Scripture.",
+
+  "brandPromise": "Every Berean Sky resource should help people see God's creation more clearly, understand Scripture more deeply, and grow in wonder, worship, and faith in God.",
+
+  "coreThemes": [
+    "Scripture",
+    "Creation",
+    "Wonder",
+    "Faith",
+    "Exploration",
+    "Biblical Understanding",
+    "God's Glory"
+  ],
 
   "voice": [
-
     "wonder",
     "humility",
     "clarity",
-    "encouragement"
-
+    "encouragement",
+    "reverence",
+    "curiosity"
   ],
 
   "audience": [
-
     "families",
     "homeschoolers",
     "church groups",
-    "individual learners"
+    "individual learners",
+    "children",
+    "parents",
+    "educators"
+  ],
 
+  "contentCharacteristics": [
+    "Biblically faithful",
+    "Educational",
+    "Accessible",
+    "Visually engaging",
+    "Scripture centered",
+    "Creation focused",
+    "Faith building",
+    "Wonder inspiring"
+  ],
+
+  "productObjectives": [
+    "Magnify the glory of God",
+    "Teach Scripture faithfully",
+    "Encourage exploration of God's creation",
+    "Help people understand the true nature of God's creation",
+    "Strengthen biblical literacy",
+    "Strengthen faith in God",
+    "Encourage family discipleship"
   ]
-
 }
