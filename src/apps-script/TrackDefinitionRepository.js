@@ -1,6 +1,6 @@
 /**
  * Track Definition Repository
- * Version 1.0
+ * Version 3.0
  */
 
 function getTrackDefinition(
@@ -35,21 +35,16 @@ function getTrackDefinition(
   ) {
 
     throw new Error(
-
       "Track definition not found: " +
-
       trackId
-
     );
 
   }
 
   return JSON.parse(
-
     files.next()
       .getBlob()
       .getDataAsString()
-
   );
 
 }
