@@ -1,6 +1,6 @@
 /**
  * Page Manifest Generator
- * Version 2.0
+ * Version 3.0
  */
 
 function generatePageManifest(
@@ -23,7 +23,7 @@ function generatePageManifest(
       page.pageNumber,
 
     pageType:
-      page.pageType,
+      page.pageType || "",
 
     title:
       page.title || "",
