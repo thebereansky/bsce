@@ -2117,3 +2117,18 @@ function testGenerateFirstColoringPage() {
   );
 
 }
+
+function testPrototypeColoringBookPlan() {
+
+  const plan =
+    buildStudyColoringBookPlan();
+
+  Logger.log(
+    JSON.stringify(
+      plan,
+      null,
+      2
+    )
+  );
+
+}
