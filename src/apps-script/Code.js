@@ -2031,3 +2031,26 @@ function testProvisionCurriculum() {
   initializeStudyFolders();
 
 }
+
+function testYouTubeFolderCreation() {
+
+  const study =
+    getActiveStudy();
+
+  createYouTubeSubfolders(
+
+    buildSeriesFolderName(
+      study
+    ),
+
+    buildTrackFolderName(
+      study
+    ),
+
+    buildStudyFolderName(
+      study
+    )
+
+  );
+
+}
