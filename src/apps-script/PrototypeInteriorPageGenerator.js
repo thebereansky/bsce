@@ -29,3 +29,55 @@ function generatePrototypeInteriorPages() {
   );
 
 }
+
+function generatePrototypePage(
+  page
+) {
+
+  const prompt = [
+
+    "Children's coloring book page.",
+
+    page.title || "",
+
+    page.scripture || "",
+
+    "Bold outlines.",
+
+    "Large coloring areas.",
+
+    "Professional border.",
+
+    "Educational biblical illustration.",
+
+    "Scripture based.",
+
+    "Black and white."
+
+  ].join(" ");
+
+  const image =
+    generateImage(
+      prompt
+    );
+
+  image.setName(
+
+    "page-" +
+
+    String(
+      page.pageNumber
+    ).padStart(
+      3,
+      "0"
+    ) +
+
+    ".png"
+
+  );
+
+  savePrototypeImage(
+    image
+  );
+
+}
