@@ -2185,3 +2185,18 @@ function testPrototypeBook() {
   buildPrototypeBook();
 
 }
+
+function testGenerateColoringBookPlan() {
+
+  const plan =
+    generateColoringBookPlan();
+
+  Logger.log(
+    JSON.stringify(
+      plan,
+      null,
+      2
+    )
+  );
+
+}
