@@ -2179,3 +2179,9 @@ function testGeneratePageManifests() {
   generateColoringBookPageManifests();
 
 }
+
+function testPrototypeBook() {
+
+  buildPrototypeBook();
+
+}
