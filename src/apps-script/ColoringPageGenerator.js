@@ -1,24 +1,41 @@
 /**
  * Coloring Page Generator
- * Version 1.0
+ * Version 2.0
  */
 
-function generateColoringPage() {
+function generateColoringPage(
+  pageManifest
+) {
 
   Logger.log(
     "Generating Coloring Page..."
   );
 
   const prompt =
-    buildColoringPagePrompt();
+    buildColoringPagePrompt(
+      pageManifest
+    );
 
   const image =
     generateImage(
       prompt
     );
 
+  const filename =
+
+    "page-" +
+
+    String(
+      pageManifest.pageNumber || 1
+    ).padStart(
+      3,
+      "0"
+    ) +
+
+    ".png";
+
   image.setName(
-    "page-001.png"
+    filename
   );
 
   const folder =
@@ -36,7 +53,7 @@ function generateColoringPage() {
         getActiveStudy()
       ),
 
-      "07 - Children's Products"
+      "07 - Children's Materials"
 
     );
 
