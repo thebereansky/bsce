@@ -2060,3 +2060,60 @@ function testStudyDefinitionProvisioning() {
   provisionStudyDefinitions();
 
 }
+
+function testStudy001ColoringManifest() {
+
+  const curriculum =
+    getSeriesCurriculum();
+
+  const study =
+
+    curriculum.tracks[0]
+      .studies[0];
+
+  const pages =
+
+    buildStudyColoringPages(
+      study
+    );
+
+  Logger.log(
+
+    JSON.stringify(
+      pages,
+      null,
+      2
+    )
+
+  );
+
+}
+
+function testGenerateFirstColoringPage() {
+
+  const curriculum =
+    getSeriesCurriculum();
+
+  const study =
+
+    curriculum.tracks[0]
+      .studies[0];
+
+  const manifest =
+
+    buildColoringPageManifest(
+
+      study,
+
+      "SCRIPTURE_SCENE"
+
+    );
+
+  manifest.pageNumber =
+    1;
+
+  generateColoringPage(
+    manifest
+  );
+
+}
