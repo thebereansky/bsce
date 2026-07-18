@@ -1,0 +1,8 @@
+{
+  "borderStyle": {
+    "type": "double-line",
+    "thickness": "medium",
+    "margin": "0.25in",
+    "cornerStyle": "rounded"
+  }
+}
