@@ -1,4 +1,17 @@
 /**
+ * EXPERIMENTAL
+ * ----------------------------------
+ * Generated during curriculum prototype work.
+ *
+ * DO NOT USE AS AUTHORITATIVE SOURCE.
+ *
+ * Replaced by:
+ * TrackFolderGenerator.js
+ * StudyFolderGenerator.js
+ *
+ * Pending review.
+ */
+/**
  * Track Curriculum Repository
  * Version 1.0
  */
