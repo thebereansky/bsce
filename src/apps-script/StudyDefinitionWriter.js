@@ -1,10 +1,13 @@
 /**
  * Study Definition Writer
- * Version 1.0
+ * Version 2.0
+ *
+ * Persists individual study definitions
+ * generated from Track Definitions.
  */
 
 function saveStudyDefinition(
-  trackId,
+  trackSlug,
   study
 ) {
 
@@ -26,30 +29,66 @@ function saveStudyDefinition(
 
     ".json";
 
-  const content =
-    JSON.stringify({
+  const definition = {
 
-      series:
-        currentStudy.series,
+    series:
+      currentStudy.series,
 
-      track: {
+    track: {
 
-        id:
-          trackId,
-
-        name:
-          ""
-
-      },
-
-      study:
-        study
+      id:
+        trackSlug
 
     },
 
-    null,
-    2
+    study: {
 
+      id:
+        study.id,
+
+      title:
+        study.title,
+
+      primaryScripture:
+        study.primaryScripture ||
+
+        "",
+
+      bigIdea:
+        study.bigIdea ||
+
+        "",
+
+      themes:
+        study.themes ||
+
+        [],
+
+      learningObjectives:
+        study.learningObjectives ||
+
+        []
+
+    },
+
+    metadata: {
+
+      generatedOn:
+        new Date()
+          .toISOString(),
+
+      generatedBy:
+        "BSCE"
+
+    }
+
+  };
+
+  const content =
+    JSON.stringify(
+      definition,
+      null,
+      2
     );
 
   const files =
@@ -66,6 +105,11 @@ function saveStudyDefinition(
         content
       );
 
+    Logger.log(
+      "Updated: " +
+      filename
+    );
+
     return;
 
   }
@@ -74,6 +118,11 @@ function saveStudyDefinition(
     filename,
     content,
     MimeType.PLAIN_TEXT
+  );
+
+  Logger.log(
+    "Created: " +
+    filename
   );
 
 }
