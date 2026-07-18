@@ -2200,3 +2200,14 @@ function testGenerateColoringBookPlan() {
   );
 
 }
+
+function testGeneratePageManifests() {
+
+  const plan =
+    getColoringBookPlan();
+
+  plan.pages.forEach(
+    generatePageManifest
+  );
+
+}
