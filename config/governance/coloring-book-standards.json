@@ -1,26 +1,30 @@
 {
   "version": "1.0",
+  "status": "Active",
 
   "pageLayout": {
 
     "pageSize": "8.5x11",
 
-    "outerBorder": true,
+    "singleSided": true,
 
-    "innerBorder": true,
+    "includeBorder": true,
 
-    "cornerOrnaments": true,
+    "includeScriptureReferenceArea": true
 
-    "scriptureReferenceArea": true
   },
 
   "borderStyle": {
 
     "style": "decorative classic",
 
-    "lineWeight": "medium",
+    "outerBorder": true,
 
-    "cornerDesign": "simple celtic-inspired",
+    "innerBorder": true,
+
+    "cornerFlourishes": true,
+
+    "lineWeight": "medium",
 
     "consistency": "all pages"
   },
@@ -31,6 +35,45 @@
 
     "hollowLetters": true,
 
-    "colorableText": true
-  }
+    "colorableTypography": true,
+
+    "allowSolidText": false
+  },
+
+  "illustrationStandards": [
+
+    "Black and white line art",
+
+    "Bold clean outlines",
+
+    "Large coloring areas",
+
+    "No shading",
+
+    "No grayscale",
+
+    "Child friendly",
+
+    "Educational",
+
+    "Scripture aligned"
+
+  ],
+
+  "visualGovernance": [
+
+    "Earth-based viewpoint",
+
+    "No globe earth imagery",
+
+    "No space-view imagery",
+
+    "No satellite imagery",
+
+    "No NASA-style imagery",
+
+    "Scripture-first imagery"
+
+  ]
+
 }
