@@ -1,8 +1,36 @@
 {
+  "version": "1.0",
+
+  "pageLayout": {
+
+    "pageSize": "8.5x11",
+
+    "outerBorder": true,
+
+    "innerBorder": true,
+
+    "cornerOrnaments": true,
+
+    "scriptureReferenceArea": true
+  },
+
   "borderStyle": {
-    "type": "double-line",
-    "thickness": "medium",
-    "margin": "0.25in",
-    "cornerStyle": "rounded"
+
+    "style": "decorative classic",
+
+    "lineWeight": "medium",
+
+    "cornerDesign": "simple celtic-inspired",
+
+    "consistency": "all pages"
+  },
+
+  "textStyle": {
+
+    "outlineOnly": true,
+
+    "hollowLetters": true,
+
+    "colorableText": true
   }
 }
