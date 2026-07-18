@@ -1,12 +1,11 @@
 /**
  * Coloring Page Prompt Generator
- * Version 3.0
+ * Version 4.0
  */
 
-function buildColoringPagePrompt() {
-
-  const concepts =
-    getRelevantScripturalConcepts();
+function buildColoringPagePrompt(
+  pageManifest
+) {
 
   const promptParts = [
 
@@ -22,31 +21,75 @@ function buildColoringPagePrompt() {
 
     "Large coloring areas.",
 
-    "Printable KDP interior.",
+    "Professional coloring page.",
 
     "Ages 5-10.",
 
-    "Scripture-first imagery.",
+    "Scripture-first illustration.",
 
-    "Educational biblical illustration.",
+    "Educational biblical scene.",
 
-    "Earth-based viewpoint.",
+    "Single primary scene only.",
 
-    "Child-friendly.",
+    "No labels.",
 
-    "Simple composition."
+    "No Hebrew words.",
+
+    "No doctrinal diagrams.",
+
+    "No charts.",
+
+    "No clutter.",
+
+    "Include decorative border.",
+
+    "Printable Amazon KDP interior.",
+
+    "Primary Scripture:",
+
+    pageManifest.primaryScripture,
+
+    "Theme:",
+
+    pageManifest.visualTheme
 
   ];
 
-  concepts.forEach(
-    function(concept) {
+  switch (
+    pageManifest.pageType
+  ) {
+
+    case "SCRIPTURE_SCENE":
 
       promptParts.push(
-        concept
+
+        "Depict the biblical scene described by Scripture."
+
       );
 
-    }
-  );
+      break;
+
+    case "KEY_CONCEPT":
+
+      promptParts.push(
+
+        "Depict the central teaching concept in a child-friendly way."
+
+      );
+
+      break;
+
+    case "MEMORY_VERSE":
+
+      promptParts.push(
+
+        "Include a large decorative Scripture verse area."
+
+      );
+
+      break;
+
+  }
 
   return promptParts.join(
     " "
