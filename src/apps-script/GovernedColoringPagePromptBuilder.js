@@ -1,12 +1,6 @@
 /**
  * Governed Coloring Page Prompt Builder
- * Version 2.0
- *
- * Applies:
- * - Product Philosophy
- * - Brand Identity
- * - Visual Governance
- * - Coloring Book Standards
+ * Version 3.0
  */
 
 function buildGovernedColoringPagePrompt(
@@ -16,16 +10,12 @@ function buildGovernedColoringPagePrompt(
   const promptParts = [];
 
   //
-  // PRODUCT TYPE
+  // PRODUCT PURPOSE
   //
 
   promptParts.push(
     "Professional children's coloring book page."
   );
-
-  //
-  // BEREAN SKY MISSION
-  //
 
   promptParts.push(
     "Help children understand, explore, and appreciate the true nature of God's creation through Scripture."
@@ -88,7 +78,7 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "Same border style used throughout the entire book."
+    "Same border style used throughout entire book."
   );
 
   //
@@ -111,6 +101,18 @@ function buildGovernedColoringPagePrompt(
     "No solid black text."
   );
 
+  promptParts.push(
+    "Scripture reference centered at bottom."
+  );
+
+  promptParts.push(
+    "Small consistent footer text."
+  );
+
+  promptParts.push(
+    "Footer occupies approximately five percent of page height."
+  );
+
   //
   // VISUAL GOVERNANCE
   //
@@ -128,15 +130,7 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "Visible sky from earth."
-  );
-
-  promptParts.push(
     "Biblical observational perspective."
-  );
-
-  promptParts.push(
-    "Never depict the earth from above."
   );
 
   promptParts.push(
@@ -144,11 +138,31 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "Never depict a planetary earth."
+    "Never depict a spherical earth."
   );
 
   promptParts.push(
-    "Never depict the earth floating in space."
+    "Never depict earth as a planet."
+  );
+
+  promptParts.push(
+    "Never show earth floating in space."
+  );
+
+  promptParts.push(
+    "Never show visible planetary curvature."
+  );
+
+  promptParts.push(
+    "If viewed from above, depict land and sea only."
+  );
+
+  promptParts.push(
+    "Flat horizon."
+  );
+
+  promptParts.push(
+    "Straight horizon."
   );
 
   promptParts.push(
@@ -188,8 +202,18 @@ function buildGovernedColoringPagePrompt(
 
   }
 
+  if (
+    page.visualDescription
+  ) {
+
+    promptParts.push(
+      page.visualDescription
+    );
+
+  }
+
   //
-  // PAGE TYPES
+  // PAGE TYPE LOGIC
   //
 
   switch (
@@ -203,7 +227,15 @@ function buildGovernedColoringPagePrompt(
       );
 
       promptParts.push(
-        "Biblical narrative illustration."
+        "Only depict elements described in the scene description."
+      );
+
+      promptParts.push(
+        "Do not add unrelated celestial objects."
+      );
+
+      promptParts.push(
+        "Do not invent additional biblical events."
       );
 
       break;
