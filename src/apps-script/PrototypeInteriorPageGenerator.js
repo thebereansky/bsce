@@ -1,6 +1,6 @@
 /**
  * Prototype Interior Page Generator
- * Version 2.0
+ * Version 2.1
  */
 
 function generatePrototypeInteriorPages() {
@@ -17,7 +17,7 @@ function generatePrototypeInteriorPages() {
 
           page.pageNumber >= 4 &&
 
-          page.pageNumber <= 8
+          page.pageNumber <= 9
 
         );
 
