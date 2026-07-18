@@ -1,6 +1,12 @@
 /**
  * Governed Coloring Page Prompt Builder
- * Version 1.0
+ * Version 2.0
+ *
+ * Applies:
+ * - Product Philosophy
+ * - Brand Identity
+ * - Visual Governance
+ * - Coloring Book Standards
  */
 
 function buildGovernedColoringPagePrompt(
@@ -10,7 +16,7 @@ function buildGovernedColoringPagePrompt(
   const promptParts = [];
 
   //
-  // Product Type
+  // PRODUCT TYPE
   //
 
   promptParts.push(
@@ -18,7 +24,19 @@ function buildGovernedColoringPagePrompt(
   );
 
   //
-  // Coloring Book Standards
+  // BEREAN SKY MISSION
+  //
+
+  promptParts.push(
+    "Help children understand, explore, and appreciate the true nature of God's creation through Scripture."
+  );
+
+  promptParts.push(
+    "Encourage wonder, worship, and faith in God."
+  );
+
+  //
+  // COLORING BOOK STANDARDS
   //
 
   promptParts.push(
@@ -50,7 +68,7 @@ function buildGovernedColoringPagePrompt(
   );
 
   //
-  // Border Standard
+  // BORDER STANDARD
   //
 
   promptParts.push(
@@ -66,11 +84,7 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "Large interior coloring area."
-  );
-
-  promptParts.push(
-    "Reserved scripture reference area at bottom."
+    "Classic storybook border."
   );
 
   promptParts.push(
@@ -78,7 +92,7 @@ function buildGovernedColoringPagePrompt(
   );
 
   //
-  // Typography Standard
+  // TYPOGRAPHY
   //
 
   promptParts.push(
@@ -98,7 +112,7 @@ function buildGovernedColoringPagePrompt(
   );
 
   //
-  // Visual Governance
+  // VISUAL GOVERNANCE
   //
 
   promptParts.push(
@@ -106,7 +120,35 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "No globe earth imagery."
+    "Human observer perspective."
+  );
+
+  promptParts.push(
+    "Ground-level viewpoint."
+  );
+
+  promptParts.push(
+    "Visible sky from earth."
+  );
+
+  promptParts.push(
+    "Biblical observational perspective."
+  );
+
+  promptParts.push(
+    "Never depict the earth from above."
+  );
+
+  promptParts.push(
+    "Never depict a globe earth."
+  );
+
+  promptParts.push(
+    "Never depict a planetary earth."
+  );
+
+  promptParts.push(
+    "Never depict the earth floating in space."
   );
 
   promptParts.push(
@@ -121,12 +163,8 @@ function buildGovernedColoringPagePrompt(
     "No NASA-style imagery."
   );
 
-  promptParts.push(
-    "Scripture-first imagery."
-  );
-
   //
-  // Page Specific Content
+  // PAGE CONTENT
   //
 
   if (
@@ -144,85 +182,77 @@ function buildGovernedColoringPagePrompt(
   ) {
 
     promptParts.push(
-      "Scripture reference: " +
+      "Scripture Reference: " +
       page.scripture
     );
 
   }
 
   //
-  // Page Type Handling
+  // PAGE TYPES
   //
 
   switch (
-  page.pageType
-) {
+    page.pageType
+  ) {
 
-  case "SCRIPTURE_SCENE":
+    case "SCRIPTURE_SCENE":
 
-    promptParts.push(
-      "Illustrate the Scripture scene."
-    );
+      promptParts.push(
+        "Illustrate the Scripture scene."
+      );
 
-    promptParts.push(
-      "Biblical narrative illustration."
-    );
+      promptParts.push(
+        "Biblical narrative illustration."
+      );
 
-    break;
+      break;
 
-  case "MEMORY_VERSE_PAGE":
+    case "MEMORY_VERSE_PAGE":
 
-    promptParts.push(
-      "Large decorative memory verse."
-    );
+      promptParts.push(
+        "Large memory verse page."
+      );
 
-    promptParts.push(
-      "Outline lettering only."
-    );
+      promptParts.push(
+        "Colorable typography."
+      );
 
-    promptParts.push(
-      "Colorable typography."
-    );
+      promptParts.push(
+        "Minimal supporting illustration."
+      );
 
-    promptParts.push(
-      "Minimal decorative imagery."
-    );
+      break;
 
-    break;
+    case "TYPOGRAPHY_PAGE":
 
-  case "TYPOGRAPHY_PAGE":
+      promptParts.push(
+        "Large inspirational Scripture quote."
+      );
 
-    promptParts.push(
-      "Large inspirational Scripture quote."
-    );
+      promptParts.push(
+        "Decorative lettering."
+      );
 
-    promptParts.push(
-      "Decorative colorable lettering."
-    );
+      break;
 
-    promptParts.push(
-      "Elegant biblical artwork."
-    );
+    case "REFLECTION_PAGE":
 
-    break;
+      promptParts.push(
+        "Wonder of creation."
+      );
 
-  case "REFLECTION_PAGE":
+      promptParts.push(
+        "Majesty of God."
+      );
 
-    promptParts.push(
-      "Wonder of creation."
-    );
+      promptParts.push(
+        "Worship themed illustration."
+      );
 
-    promptParts.push(
-      "Majesty of God."
-    );
+      break;
 
-    promptParts.push(
-      "Worship themed illustration."
-    );
-
-    break;
-
-}
+  }
 
   return promptParts.join(
     " "
