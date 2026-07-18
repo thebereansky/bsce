@@ -1,6 +1,6 @@
 /**
  * Page Manifest Generator
- * Version 1.0
+ * Version 2.0
  */
 
 function generatePageManifest(
@@ -15,6 +15,10 @@ function generatePageManifest(
 
   const manifest = {
 
+    generatedOn:
+      new Date()
+        .toISOString(),
+
     pageNumber:
       page.pageNumber,
 
@@ -22,13 +26,29 @@ function generatePageManifest(
       page.pageType,
 
     title:
-      page.title,
+      page.title || "",
 
     scripture:
-      page.scripture,
+      page.scripture || "",
+
+    visualDescription:
+      page.visualDescription || "",
 
     imagePrompt:
-      prompt
+      prompt,
+
+    outputFilename:
+
+      "page-" +
+
+      String(
+        page.pageNumber
+      ).padStart(
+        3,
+        "0"
+      ) +
+
+      ".png"
 
   };
 
