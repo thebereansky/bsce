@@ -2132,3 +2132,44 @@ function testPrototypeColoringBookPlan() {
   );
 
 }
+
+function testSavePrototypeColoringBookPlan() {
+
+  const plan =
+    buildStudyColoringBookPlan();
+
+  saveStudyColoringBookPlan(
+    plan
+  );
+
+}
+
+function testCoverManifest() {
+
+  const manifest =
+    buildCoverManifest();
+
+  saveColoringBookManifest(
+
+    "cover-manifest.json",
+
+    manifest
+
+  );
+
+}
+
+function testBackCoverManifest() {
+
+  const manifest =
+    buildBackCoverManifest();
+
+  saveColoringBookManifest(
+
+    "back-cover-manifest.json",
+
+    manifest
+
+  );
+
+}
