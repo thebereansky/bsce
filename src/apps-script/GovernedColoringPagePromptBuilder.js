@@ -1,6 +1,6 @@
 /**
  * Governed Coloring Page Prompt Builder
- * Version 3.0
+ * Version 4.0
  */
 
 function buildGovernedColoringPagePrompt(
@@ -57,6 +57,10 @@ function buildGovernedColoringPagePrompt(
     "Child friendly."
   );
 
+  promptParts.push(
+    "Professional Amazon KDP interior."
+  );
+
   //
   // BORDER STANDARD
   //
@@ -102,6 +106,10 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
+    "Consistent lettering style across entire book."
+  );
+
+  promptParts.push(
     "Scripture reference centered at bottom."
   );
 
@@ -111,6 +119,46 @@ function buildGovernedColoringPagePrompt(
 
   promptParts.push(
     "Footer occupies approximately five percent of page height."
+  );
+
+  //
+  // TEXT CONTROL
+  //
+
+  promptParts.push(
+    "Visual descriptions are scene instructions only."
+  );
+
+  promptParts.push(
+    "Do not render visual descriptions as text."
+  );
+
+  promptParts.push(
+    "Do not create captions."
+  );
+
+  promptParts.push(
+    "Do not create narration."
+  );
+
+  promptParts.push(
+    "Do not create explanatory sentences."
+  );
+
+  promptParts.push(
+    "Do not create placeholder text."
+  );
+
+  promptParts.push(
+    "Do not create empty text boxes."
+  );
+
+  promptParts.push(
+    "Do not create blank rectangles."
+  );
+
+  promptParts.push(
+    "Only render page title and scripture reference."
   );
 
   //
@@ -154,7 +202,15 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "If viewed from above, depict land and sea only."
+    "Never use NASA-style imagery."
+  );
+
+  promptParts.push(
+    "Never use satellite imagery."
+  );
+
+  promptParts.push(
+    "No outer-space scenes."
   );
 
   promptParts.push(
@@ -165,16 +221,40 @@ function buildGovernedColoringPagePrompt(
     "Straight horizon."
   );
 
+  //
+  // CREATION TIMELINE GOVERNANCE
+  //
+
   promptParts.push(
-    "No space-view imagery."
+    "Depict only elements that exist in the referenced Scripture passage."
   );
 
   promptParts.push(
-    "No satellite imagery."
+    "Do not add decorative animals."
   );
 
   promptParts.push(
-    "No NASA-style imagery."
+    "Do not add decorative people."
+  );
+
+  promptParts.push(
+    "Do not add decorative plants."
+  );
+
+  promptParts.push(
+    "Do not add decorative celestial objects."
+  );
+
+  promptParts.push(
+    "Only include elements directly supported by the Scripture passage."
+  );
+
+  promptParts.push(
+    "Avoid generic Christian coloring book imagery."
+  );
+
+  promptParts.push(
+    "Depict the actual biblical scene."
   );
 
   //
@@ -186,6 +266,7 @@ function buildGovernedColoringPagePrompt(
   ) {
 
     promptParts.push(
+      "Page Title: " +
       page.title
     );
 
@@ -207,6 +288,7 @@ function buildGovernedColoringPagePrompt(
   ) {
 
     promptParts.push(
+      "Scene Description: " +
       page.visualDescription
     );
 
@@ -220,22 +302,30 @@ function buildGovernedColoringPagePrompt(
     page.pageType
   ) {
 
+    case "Cover":
+
+      promptParts.push(
+        "Professional commercial coloring book cover."
+      );
+
+      promptParts.push(
+        "Retail quality."
+      );
+
+      promptParts.push(
+        "Eye-catching."
+      );
+
+      break;
+
     case "SCRIPTURE_SCENE":
 
       promptParts.push(
-        "Illustrate the Scripture scene."
+        "Illustrate the specific Scripture scene."
       );
 
       promptParts.push(
-        "Only depict elements described in the scene description."
-      );
-
-      promptParts.push(
-        "Do not add unrelated celestial objects."
-      );
-
-      promptParts.push(
-        "Do not invent additional biblical events."
+        "Do not add objects not present in the passage."
       );
 
       break;
@@ -243,11 +333,7 @@ function buildGovernedColoringPagePrompt(
     case "MEMORY_VERSE_PAGE":
 
       promptParts.push(
-        "Large memory verse page."
-      );
-
-      promptParts.push(
-        "Colorable typography."
+        "Large scripture typography."
       );
 
       promptParts.push(
@@ -256,30 +342,26 @@ function buildGovernedColoringPagePrompt(
 
       break;
 
-    case "TYPOGRAPHY_PAGE":
+    case "REFLECTION_PAGE":
 
       promptParts.push(
-        "Large inspirational Scripture quote."
+        "Wonder and worship theme."
       );
 
       promptParts.push(
-        "Decorative lettering."
+        "Creation-focused illustration."
       );
 
       break;
 
-    case "REFLECTION_PAGE":
+    case "BackCover":
 
       promptParts.push(
-        "Wonder of creation."
+        "Professional coloring book back cover."
       );
 
       promptParts.push(
-        "Majesty of God."
-      );
-
-      promptParts.push(
-        "Worship themed illustration."
+        "Commercial retail product."
       );
 
       break;
