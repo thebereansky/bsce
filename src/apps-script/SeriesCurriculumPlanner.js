@@ -1,6 +1,6 @@
 /**
  * Series Curriculum Planner
- * Version 1.0
+ * Version 2.0
  *
  * Generates the complete
  * curriculum roadmap for a series.
@@ -33,13 +33,49 @@ function buildSeriesCurriculumPrompt() {
 
     "",
 
+    "IMPORTANT:",
+
+    "Track IDs must be numeric strings.",
+
+    "Examples:",
+    "001",
+    "002",
+
+    "",
+
+    "Track slugs must be URL-safe.",
+
+    "Examples:",
+    "foundations",
+    "advanced-topics",
+
+    "",
+
     "Each track should contain 15 studies.",
+
+    "",
+
+    "Study IDs must be numeric strings.",
+
+    "Examples:",
+    "001",
+    "002",
+    "003",
+
+    "",
+
+    "Study slugs must be URL-safe.",
+
+    "Examples:",
+    "creation-account",
+    "heavens-firmament-earth",
 
     "",
 
     "For each study provide:",
 
     "- Study ID",
+    "- Study Slug",
     "- Study Title",
     "- Primary Scripture",
     "- Big Idea",
@@ -56,13 +92,21 @@ function buildSeriesCurriculumPrompt() {
 
     JSON.stringify({
 
-      series: {},
+      series: {
+
+        id: "",
+
+        name: ""
+
+      },
 
       tracks: [
 
         {
 
-          id: "",
+          id: "001",
+
+          slug: "",
 
           name: "",
 
@@ -72,7 +116,9 @@ function buildSeriesCurriculumPrompt() {
 
             {
 
-              id: "",
+              id: "001",
+
+              slug: "",
 
               title: "",
 
