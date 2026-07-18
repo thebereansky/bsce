@@ -1,6 +1,6 @@
 /**
- * Prototype Interior Generator
- * Version 1.0
+ * Prototype Interior Page Generator
+ * Version 2.0
  */
 
 function generatePrototypeInteriorPages() {
@@ -30,31 +30,20 @@ function generatePrototypeInteriorPages() {
 
 }
 
+
 function generatePrototypePage(
   page
 ) {
 
-  const prompt = [
+  const prompt =
 
-    "Children's coloring book page.",
+    buildGovernedColoringPagePrompt(
+      page
+    );
 
-    page.title || "",
-
-    page.scripture || "",
-
-    "Bold outlines.",
-
-    "Large coloring areas.",
-
-    "Professional border.",
-
-    "Educational biblical illustration.",
-
-    "Scripture based.",
-
-    "Black and white."
-
-  ].join(" ");
+  Logger.log(
+    prompt
+  );
 
   const image =
     generateImage(
