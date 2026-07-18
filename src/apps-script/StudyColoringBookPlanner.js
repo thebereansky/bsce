@@ -55,12 +55,13 @@ function buildStudyColoringBookPlan() {
 
 }
 
-
 /**
  * Prototype book structure.
  *
- * We will expand this to
- * 32 pages after review.
+ * Version 2.0
+ *
+ * Designed as a commercial
+ * Berean Sky coloring book.
  */
 function buildPrototypeBookPages(
   study
@@ -80,7 +81,7 @@ function buildPrototypeBookPages(
 
     {
       pageNumber: 3,
-      pageType: "ABOUT_BOOK"
+      pageType: "INTRODUCTION_PAGE"
     },
 
     {
@@ -93,29 +94,29 @@ function buildPrototypeBookPages(
     {
       pageNumber: 5,
       pageType: "SCRIPTURE_SCENE",
-      title: "God Created the Heavens",
-      scripture: "Genesis 1:1"
+      title: "The Earth Was Without Form",
+      scripture: "Genesis 1:2"
     },
 
     {
       pageNumber: 6,
       pageType: "SCRIPTURE_SCENE",
-      title: "God Created the Earth",
-      scripture: "Genesis 1:1"
+      title: "Darkness Upon the Deep",
+      scripture: "Genesis 1:2"
     },
 
     {
       pageNumber: 7,
-      pageType: "SCRIPTURE_PAGE",
-      title: "Creation Declares His Glory",
-      scripture: "Psalm 19:1"
+      pageType: "MEMORY_VERSE_PAGE",
+      title: "In the Beginning God Created",
+      scripture: "Genesis 1:1"
     },
 
     {
       pageNumber: 8,
-      pageType: "SCRIPTURE_PAGE",
-      title: "By Faith We Understand",
-      scripture: "Hebrews 11:3"
+      pageType: "TYPOGRAPHY_PAGE",
+      title: "The Heavens Declare the Glory of God",
+      scripture: "Psalm 19:1"
     },
 
     {
