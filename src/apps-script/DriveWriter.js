@@ -81,11 +81,20 @@ function saveFileToStudySubfolder(
       studyFolderName
     );
 
-  const subfolder =
-    getChildFolderByName(
-      studyFolder,
-      subfolderName
-    );
+const subfolder =
+  getChildFolderByName(
+    studyFolder,
+    subfolderName
+  );
+
+if (!subfolder) {
+
+  throw new Error(
+    "Subfolder not found: " +
+    subfolderName
+  );
+
+}
 
   const files =
     subfolder.getFilesByName(
