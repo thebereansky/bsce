@@ -1,6 +1,6 @@
 /**
  * Coloring Book Planning Prompt Builder
- * Version 3.0
+ * Version 4.0
  */
 
 function buildColoringBookPlanningPrompt() {
@@ -100,14 +100,49 @@ function buildColoringBookPlanningPrompt() {
 
     "",
 
+    "Product Title Rules:",
+
+    "- The book title should be the Study title",
+    "- Do not prepend The Berean Sky to the title",
+    "- The Berean Sky is the publisher",
+    "- Example Title: In the Beginning",
+    "- Example Publisher: The Berean Sky",
+
+    "",
+
     "Book Structure:",
 
-    "- Page 1 = Front Cover",
-    "- Pages 2-3 = Introduction",
-    "- Pages 4-26 = Main Coloring Pages",
-    "- Pages 27-29 = Memory Verse Pages",
-    "- Pages 30-31 = Reflection Pages",
-    "- Page 32 = Back Cover",
+    "- Page 1 = FRONT_COVER",
+    "- Pages 2-31 = COLORING_PAGE",
+    "- Page 32 = BACK_COVER",
+
+    "",
+
+    "Cover Requirements:",
+
+    "- Front cover should be a full-color watercolor illustration",
+    "- Front cover should appear professionally painted",
+    "- Front cover is not a coloring page",
+    "- Front cover should be retail-quality",
+    "- Front cover should communicate wonder and the majesty of God's creation",
+
+    "- Back cover should be a full-color watercolor illustration",
+    "- Back cover is not a coloring page",
+    "- Back cover should include a product description area",
+    "- Back cover should include space for future book thumbnails",
+    "- Back cover should support future series marketing",
+
+    "",
+
+    "Coloring Page Requirements:",
+
+    "- Every interior page should be a coloring page",
+    "- Do not create introduction pages",
+    "- Do not create memory verse pages",
+    "- Do not create reflection pages",
+    "- Maximize coloring value for the customer",
+    "- At least 25 pages should come directly from the study",
+    "- Remaining pages may reinforce wonder worship creation scripture and biblical cosmology themes",
 
     "",
 
@@ -116,9 +151,9 @@ function buildColoringBookPlanningPrompt() {
     "- Exactly 32 pages",
     "- Unique Scripture references",
     "- No duplicate verses",
+    "- A Scripture reference may appear only once in the entire book",
     "- Scripture references should progress naturally through the study",
     "- Commercial product quality",
-    "- Educational progression",
     "- Suitable for Amazon KDP",
     "- Suitable for ages 5-10",
     "- Every page should contribute to wonder worship or faith",
