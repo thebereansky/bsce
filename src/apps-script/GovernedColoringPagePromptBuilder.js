@@ -1,6 +1,6 @@
 /**
  * Governed Coloring Page Prompt Builder
- * Version 4.0
+ * Version 5.0
  */
 
 function buildGovernedColoringPagePrompt(
@@ -14,151 +14,11 @@ function buildGovernedColoringPagePrompt(
   //
 
   promptParts.push(
-    "Professional children's coloring book page."
-  );
-
-  promptParts.push(
     "Help children understand, explore, and appreciate the true nature of God's creation through Scripture."
   );
 
   promptParts.push(
     "Encourage wonder, worship, and faith in God."
-  );
-
-  //
-  // COLORING BOOK STANDARDS
-  //
-
-  promptParts.push(
-    "Black and white line art."
-  );
-
-  promptParts.push(
-    "Bold clean outlines."
-  );
-
-  promptParts.push(
-    "Large coloring areas."
-  );
-
-  promptParts.push(
-    "No shading."
-  );
-
-  promptParts.push(
-    "No grayscale."
-  );
-
-  promptParts.push(
-    "Educational biblical illustration."
-  );
-
-  promptParts.push(
-    "Child friendly."
-  );
-
-  promptParts.push(
-    "Professional Amazon KDP interior."
-  );
-
-  //
-  // BORDER STANDARD
-  //
-
-  promptParts.push(
-    "Consistent decorative coloring book border."
-  );
-
-  promptParts.push(
-    "Double-line border."
-  );
-
-  promptParts.push(
-    "Decorative corner flourishes."
-  );
-
-  promptParts.push(
-    "Classic storybook border."
-  );
-
-  promptParts.push(
-    "Same border style used throughout entire book."
-  );
-
-  //
-  // TYPOGRAPHY
-  //
-
-  promptParts.push(
-    "Outline lettering only."
-  );
-
-  promptParts.push(
-    "Hollow letters."
-  );
-
-  promptParts.push(
-    "Colorable typography."
-  );
-
-  promptParts.push(
-    "No solid black text."
-  );
-
-  promptParts.push(
-    "Consistent lettering style across entire book."
-  );
-
-  promptParts.push(
-    "Scripture reference centered at bottom."
-  );
-
-  promptParts.push(
-    "Small consistent footer text."
-  );
-
-  promptParts.push(
-    "Footer occupies approximately five percent of page height."
-  );
-
-  //
-  // TEXT CONTROL
-  //
-
-  promptParts.push(
-    "Visual descriptions are scene instructions only."
-  );
-
-  promptParts.push(
-    "Do not render visual descriptions as text."
-  );
-
-  promptParts.push(
-    "Do not create captions."
-  );
-
-  promptParts.push(
-    "Do not create narration."
-  );
-
-  promptParts.push(
-    "Do not create explanatory sentences."
-  );
-
-  promptParts.push(
-    "Do not create placeholder text."
-  );
-
-  promptParts.push(
-    "Do not create empty text boxes."
-  );
-
-  promptParts.push(
-    "Do not create blank rectangles."
-  );
-
-  promptParts.push(
-    "Only render page title and scripture reference."
   );
 
   //
@@ -250,11 +110,47 @@ function buildGovernedColoringPagePrompt(
   );
 
   promptParts.push(
-    "Avoid generic Christian coloring book imagery."
+    "Avoid generic Christian imagery."
   );
 
   promptParts.push(
     "Depict the actual biblical scene."
+  );
+
+  //
+  // TEXT CONTROL
+  //
+
+  promptParts.push(
+    "Visual descriptions are scene instructions only."
+  );
+
+  promptParts.push(
+    "Do not render visual descriptions as text."
+  );
+
+  promptParts.push(
+    "Do not create captions."
+  );
+
+  promptParts.push(
+    "Do not create narration."
+  );
+
+  promptParts.push(
+    "Do not create explanatory sentences."
+  );
+
+  promptParts.push(
+    "Do not create placeholder text."
+  );
+
+  promptParts.push(
+    "Do not create empty text boxes."
+  );
+
+  promptParts.push(
+    "Do not create blank rectangles."
   );
 
   //
@@ -266,7 +162,7 @@ function buildGovernedColoringPagePrompt(
   ) {
 
     promptParts.push(
-      "Page Title: " +
+      "Title: " +
       page.title
     );
 
@@ -302,66 +198,166 @@ function buildGovernedColoringPagePrompt(
     page.pageType
   ) {
 
-    case "Cover":
+    //
+    // FRONT COVER
+    //
+
+    case "FRONT_COVER":
 
       promptParts.push(
-        "Professional commercial coloring book cover."
+        "Professional commercial book cover."
       );
 
       promptParts.push(
-        "Retail quality."
+        "Retail-quality product."
+      );
+
+      promptParts.push(
+        "Full-color watercolor painting."
+      );
+
+      promptParts.push(
+        "Beautiful watercolor illustration."
+      );
+
+      promptParts.push(
+        "Bookstore-quality design."
       );
 
       promptParts.push(
         "Eye-catching."
       );
 
-      break;
-
-    case "SCRIPTURE_SCENE":
-
       promptParts.push(
-        "Illustrate the specific Scripture scene."
+        "Not a coloring page."
       );
 
       promptParts.push(
-        "Do not add objects not present in the passage."
-      );
-
-      break;
-
-    case "MEMORY_VERSE_PAGE":
-
-      promptParts.push(
-        "Large scripture typography."
+        "Do not include The Berean Sky in the title."
       );
 
       promptParts.push(
-        "Minimal supporting illustration."
+        "The title should contain only the book title."
+      );
+
+      promptParts.push(
+        "Small publisher branding allowed."
       );
 
       break;
 
-    case "REFLECTION_PAGE":
+    //
+    // INTERIOR PAGE
+    //
+
+    case "COLORING_PAGE":
 
       promptParts.push(
-        "Wonder and worship theme."
+        "Professional children's coloring book page."
       );
 
       promptParts.push(
-        "Creation-focused illustration."
+        "Black and white line art."
+      );
+
+      promptParts.push(
+        "Bold clean outlines."
+      );
+
+      promptParts.push(
+        "Large coloring areas."
+      );
+
+      promptParts.push(
+        "No shading."
+      );
+
+      promptParts.push(
+        "No grayscale."
+      );
+
+      promptParts.push(
+        "Professional Amazon KDP interior."
+      );
+
+      promptParts.push(
+        "Consistent decorative coloring book border."
+      );
+
+      promptParts.push(
+        "Double-line border."
+      );
+
+      promptParts.push(
+        "Decorative corner flourishes."
+      );
+
+      promptParts.push(
+        "Classic storybook border."
+      );
+
+      promptParts.push(
+        "Same border style used throughout the book."
+      );
+
+      promptParts.push(
+        "Outline lettering only."
+      );
+
+      promptParts.push(
+        "Hollow letters."
+      );
+
+      promptParts.push(
+        "Colorable typography."
+      );
+
+      promptParts.push(
+        "No solid black text."
+      );
+
+      promptParts.push(
+        "Consistent lettering style."
+      );
+
+      promptParts.push(
+        "Scripture reference centered at bottom."
       );
 
       break;
 
-    case "BackCover":
+    //
+    // BACK COVER
+    //
+
+    case "BACK_COVER":
 
       promptParts.push(
-        "Professional coloring book back cover."
+        "Professional commercial back cover."
       );
 
       promptParts.push(
-        "Commercial retail product."
+        "Full-color watercolor painting."
+      );
+
+      promptParts.push(
+        "Retail-quality design."
+      );
+
+      promptParts.push(
+        "Not a coloring page."
+      );
+
+      promptParts.push(
+        "Include space for product description."
+      );
+
+      promptParts.push(
+        "Include space for future book thumbnails."
+      );
+
+      promptParts.push(
+        "Small publisher branding allowed."
       );
 
       break;
