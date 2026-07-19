@@ -2144,6 +2144,31 @@ function testSavePrototypeColoringBookPlan() {
 
 }
 
+function testColoringBookSavePath() {
+
+  const study =
+    getActiveStudy();
+
+  Logger.log(
+    buildSeriesFolderName(
+      study
+    )
+  );
+
+  Logger.log(
+    buildTrackFolderName(
+      study
+    )
+  );
+
+  Logger.log(
+    buildStudyFolderName(
+      study
+    )
+  );
+
+}
+
 function testCoverManifest() {
 
   const manifest =
