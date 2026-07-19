@@ -2242,3 +2242,12 @@ function testGenerateColoringBookImages() {
   generateColoringBookImages();
 
 }
+
+function testGenerateArtwork4to8() {
+
+  generateArtworkPages(
+    4,
+    8
+  );
+
+}
