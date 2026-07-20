@@ -1,7 +1,33 @@
 /**
  * Coloring Book Manifest Repository
- * Version 1.0
+ * Version 2.0
  */
+
+function getColoringBookManifestFolder() {
+
+  const study =
+    getActiveStudy();
+
+  return getOrCreateStudySubfolder(
+
+    buildSeriesFolderName(
+      study
+    ),
+
+    buildTrackFolderName(
+      study
+    ),
+
+    buildStudyFolderName(
+      study
+    ),
+
+    "07 - Children's Materials"
+
+  );
+
+}
+
 
 function getColoringBookPageManifest(
   pageNumber
@@ -22,7 +48,7 @@ function getColoringBookPageManifest(
 
   const files =
 
-    getCurrentStudyFolder()
+    getColoringBookManifestFolder()
       .getFilesByName(
         filename
       );
