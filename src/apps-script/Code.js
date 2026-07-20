@@ -2282,3 +2282,22 @@ function testRenderPage4() {
   );
 
 }
+
+function testListManifestFiles() {
+
+  const files =
+
+    getColoringBookManifestFolder()
+      .getFiles();
+
+  while (
+    files.hasNext()
+  ) {
+
+    Logger.log(
+      files.next().getName()
+    );
+
+  }
+
+}
