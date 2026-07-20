@@ -1,10 +1,10 @@
 /**
  * Artwork Repository
- * Version 1.0
+ * Version 2.0
  */
 
 function saveArtworkImage(
-  image
+  imageBlob
 ) {
 
   const folder =
@@ -27,7 +27,7 @@ function saveArtworkImage(
     );
 
   folder.createFile(
-    image
+    imageBlob
   );
 
 }
