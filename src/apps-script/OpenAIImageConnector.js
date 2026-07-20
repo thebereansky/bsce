@@ -90,13 +90,11 @@ function generateImage(
     json.data[0].b64_json;
 
   return Utilities.newBlob(
-
     Utilities.base64Decode(
       imageBase64
     ),
-
-    "image/png"
-
+    "image/png",
+    "generated-image.png"
   );
 
 }
