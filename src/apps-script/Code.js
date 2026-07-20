@@ -2301,3 +2301,47 @@ function testListManifestFiles() {
   }
 
 }
+
+function testListChildrenMaterialsFiles() {
+
+  const study =
+    getActiveStudy();
+
+  const folder =
+    getOrCreateStudySubfolder(
+
+      buildSeriesFolderName(
+        study
+      ),
+
+      buildTrackFolderName(
+        study
+      ),
+
+      buildStudyFolderName(
+        study
+      ),
+
+      "07 - Children's Materials"
+
+    );
+
+  Logger.log(
+    "Folder: " +
+    folder.getName()
+  );
+
+  const files =
+    folder.getFiles();
+
+  while (
+    files.hasNext()
+  ) {
+
+    Logger.log(
+      files.next().getName()
+    );
+
+  }
+
+}
