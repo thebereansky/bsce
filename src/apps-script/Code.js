@@ -2345,3 +2345,37 @@ function testListChildrenMaterialsFiles() {
   }
 
 }
+
+function saveArtworkImage(
+  image
+) {
+
+  const folder =
+    getOrCreateStudySubfolder(
+      buildSeriesFolderName(
+        getActiveStudy()
+      ),
+      buildTrackFolderName(
+        getActiveStudy()
+      ),
+      buildStudyFolderName(
+        getActiveStudy()
+      ),
+      "08 - Artwork"
+    );
+
+  Logger.log(
+    "Saving artwork to: " +
+    folder.getName()
+  );
+
+  Logger.log(
+    "Artwork filename: " +
+    image.getName()
+  );
+
+  folder.createFile(
+    image
+  );
+
+}
