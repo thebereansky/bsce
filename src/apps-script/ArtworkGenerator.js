@@ -1,6 +1,6 @@
 /**
  * Artwork Generator
- * Version 1.0
+ * Version 2.0
  */
 
 function generateArtwork(
@@ -8,17 +8,16 @@ function generateArtwork(
 ) {
 
   const prompt =
-
     buildArtworkPrompt(
       pageManifest
     );
 
-  const image =
+  const imageBlob =
     generateImage(
       prompt
     );
 
-  image.setName(
+  const filename =
 
     "artwork-" +
 
@@ -29,12 +28,14 @@ function generateArtwork(
       "0"
     ) +
 
-    ".png"
+    ".png";
 
+  imageBlob.setName(
+    filename
   );
 
   saveArtworkImage(
-    image
+    imageBlob
   );
 
 }
