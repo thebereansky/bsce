@@ -2251,3 +2251,9 @@ function testGenerateArtwork4to8() {
   );
 
 }
+
+function testCreateColoringBookRenderSession() {
+
+  createColoringBookRenderSession();
+
+}
