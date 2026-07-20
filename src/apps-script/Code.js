@@ -2257,3 +2257,28 @@ function testCreateColoringBookRenderSession() {
   createColoringBookRenderSession();
 
 }
+
+function testRenderPage4() {
+
+  const presentation =
+
+    createColoringBookPresentation(
+      "BSCE Test Render"
+    );
+
+  const manifest =
+
+    getColoringBookPageManifest(
+      4
+    );
+
+  renderColoringBookPage(
+    presentation,
+    manifest
+  );
+
+  Logger.log(
+    presentation.getUrl()
+  );
+
+}
