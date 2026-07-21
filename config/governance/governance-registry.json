@@ -25,7 +25,10 @@
       "config/governance/publishing-standards.json",
 
     "approvalThresholds":
-      "config/governance/approval-thresholds.json"
+      "config/governance/approval-thresholds.json",
+
+    "coloringBookStandard":
+      "config/publishing/coloring-book-standard.json"
 
   }
 
