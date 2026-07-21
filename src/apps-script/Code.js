@@ -2397,3 +2397,21 @@ function testColoringBookStandard() {
   );
 
 }
+
+function testCreateColoringBookPresentation() {
+
+  const presentation =
+
+    createColoringBookPresentation(
+
+      "BSCE Render Test"
+
+    );
+
+  Logger.log(
+
+    presentation.getUrl()
+
+  );
+
+}
