@@ -13,43 +13,56 @@ function generatePageManifest(
       page
     );
 
-  const manifest = {
-
+   const manifest = {
+  
     generatedOn:
       new Date()
         .toISOString(),
-
+  
     pageNumber:
       page.pageNumber,
-
+  
     pageType:
-      page.pageType || "",
-
+      page.pageType,
+  
     title:
       page.title || "",
-
+  
     scripture:
       page.scripture || "",
-
+  
     visualDescription:
       page.visualDescription || "",
-
+  
     imagePrompt:
       prompt,
-
-    outputFilename:
-
-      "page-" +
-
+  
+    artworkFilename:
+  
+      "artwork-" +
+  
       String(
         page.pageNumber
       ).padStart(
         3,
         "0"
       ) +
-
+  
+      ".png",
+  
+    outputFilename:
+  
+      "page-" +
+  
+      String(
+        page.pageNumber
+      ).padStart(
+        3,
+        "0"
+      ) +
+  
       ".png"
-
+  
   };
 
   savePageManifest(
