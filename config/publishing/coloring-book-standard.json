@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+
+  "productType": "COLORING_BOOK",
+
+  "page": {
+    "widthInches": 8.5,
+    "heightInches": 11.0
+  },
+
+  "layout": {
+
+    "titleAreaPercent": 10,
+
+    "artworkAreaPercent": 82,
+
+    "footerAreaPercent": 8
+  },
+
+  "border": {
+
+    "enabled": true,
+
+    "style": "storybook",
+
+    "lineCount": 2,
+
+    "marginPixels": 40
+  },
+
+  "title": {
+
+    "enabled": true,
+
+    "position": "top-center",
+
+    "fontFamily": "ColorableOutline",
+
+    "fontSize": 64,
+
+    "maxLines": 2,
+
+    "uppercase": true
+  },
+
+  "scripture": {
+
+    "enabled": true,
+
+    "position": "bottom-center",
+
+    "fontFamily": "Serif",
+
+    "fontSize": 28
+  },
+
+  "artwork": {
+
+    "preserveAspectRatio": true,
+
+    "centerHorizontally": true,
+
+    "centerVertically": true
+  }
+
+}
