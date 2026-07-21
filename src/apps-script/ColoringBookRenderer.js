@@ -1,6 +1,6 @@
 /**
  * Coloring Book Renderer
- * Version 1.0
+ * Version 2.0
  */
 
 function createColoringBookRenderSession() {
@@ -19,6 +19,8 @@ function createColoringBookRenderSession() {
     );
 
   Logger.log(
+
+    "Presentation URL: " +
 
     presentation.getUrl()
 
