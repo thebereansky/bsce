@@ -257,3 +257,23 @@ function getProductPhilosophy() {
   );
 
 }
+
+/**
+ * Coloring Book Publishing Standard
+ */
+function getColoringBookStandard() {
+
+  const path =
+    loadGovernanceSource(
+      "coloringBookStandard"
+    );
+
+  return loadJsonFromGitHub(
+
+    buildGitHubUrl(
+      path
+    )
+
+  );
+
+}
