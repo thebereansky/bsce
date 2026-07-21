@@ -2379,3 +2379,21 @@ function saveArtworkImage(
   );
 
 }
+
+function testColoringBookStandard() {
+
+  Logger.log(
+
+    JSON.stringify(
+
+      getColoringBookStandard(),
+
+      null,
+
+      2
+
+    )
+
+  );
+
+}
