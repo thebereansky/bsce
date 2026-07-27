@@ -29,7 +29,7 @@ from render_coloring_page import render_coloring_page
 #   page-manifest-004.json
 #   artwork-004.png
 #
-LESSON_FOLDER_ID = "YOUR_LESSON_FOLDER_ID"
+LESSON_FOLDER_ID = "1PagEsyqWSPYviZ9DA5cvNMW6q6Ll3nb-"
 
 #
 # Folder containing the rendering standard.
