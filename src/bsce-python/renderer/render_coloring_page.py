@@ -1,6 +1,6 @@
 """
 BSCE Coloring Page Renderer
-Version 1.0
+Version 1.1
 
 Generates a finished coloring-book page from:
 
@@ -78,6 +78,43 @@ def draw_storybook_border(
 
 
 # --------------------------------------------------
+# Layout Calculation
+# --------------------------------------------------
+
+def calculate_layout(
+    width,
+    height,
+    layout_config
+):
+
+    title_height = int(
+        height *
+        layout_config["titleAreaPercent"] / 100
+    )
+
+    footer_height = int(
+        height *
+        layout_config["footerAreaPercent"] / 100
+    )
+
+    return {
+
+        "title_y": 40,
+
+        "artwork_box": (
+            100,
+            title_height,
+            width - 100,
+            height - footer_height
+        ),
+
+        "scripture_y":
+            height - footer_height + 40
+
+    }
+
+
+# --------------------------------------------------
 # Artwork Placement
 # --------------------------------------------------
 
@@ -110,10 +147,91 @@ def place_artwork(
 
     page.paste(
         artwork,
+        (x, y)
+    )
+
+
+# --------------------------------------------------
+# Title Rendering
+# --------------------------------------------------
+
+def draw_title(
+    draw,
+    width,
+    title_text,
+    title_config,
+    y_position
+):
+
+    if title_config["uppercase"]:
+        title_text = title_text.upper()
+
+    font = load_font(
+        title_config["fontSize"]
+    )
+
+    box = draw.textbbox(
+        (0, 0),
+        title_text,
+        font=font
+    )
+
+    text_width = box[2] - box[0]
+
+    draw.text(
+
         (
-            x,
-            y
-        )
+            (width - text_width) / 2,
+            y_position
+        ),
+
+        title_text,
+
+        fill="black",
+
+        font=font
+
+    )
+
+
+# --------------------------------------------------
+# Scripture Rendering
+# --------------------------------------------------
+
+def draw_scripture(
+    draw,
+    width,
+    height,
+    scripture_text,
+    scripture_config,
+    y_position
+):
+
+    font = load_font(
+        scripture_config["fontSize"]
+    )
+
+    box = draw.textbbox(
+        (0, 0),
+        scripture_text,
+        font=font
+    )
+
+    text_width = box[2] - box[0]
+
+    draw.text(
+
+        (
+            (width - text_width) / 2,
+            y_position
+        ),
+
+        scripture_text,
+
+        fill="black",
+
+        font=font
+
     )
 
 
@@ -138,17 +256,18 @@ def render_coloring_page(
         Path(standard_path)
     )
 
-    width = standard[
-        "rendering"
-    ][
-        "widthPixels"
-    ]
+    #
+    # Cache configuration sections
+    #
 
-    height = standard[
-        "rendering"
-    ][
-        "heightPixels"
-    ]
+    rendering = standard["rendering"]
+    layout_config = standard["layout"]
+    border_config = standard["border"]
+    title_config = standard["title"]
+    scripture_config = standard["scripture"]
+
+    width = rendering["widthPixels"]
+    height = rendering["heightPixels"]
 
     page = Image.new(
 
@@ -167,13 +286,19 @@ def render_coloring_page(
         page
     )
 
-    # ------------------------------------------
-    # Border
-    # ------------------------------------------
+    #
+    # Layout
+    #
 
-    border = standard[
-        "border"
-    ]
+    layout = calculate_layout(
+        width,
+        height,
+        layout_config
+    )
+
+    #
+    # Border
+    #
 
     draw_storybook_border(
 
@@ -183,114 +308,36 @@ def render_coloring_page(
 
         height,
 
-        border[
-            "marginPixels"
-        ],
+        border_config["marginPixels"],
 
-        border[
-            "lineCount"
-        ]
+        border_config["lineCount"]
 
     )
 
-    # ------------------------------------------
-    # Layout Areas
-    # ------------------------------------------
-
-    title_height = int(
-
-        height *
-
-        standard[
-            "layout"
-        ][
-            "titleAreaPercent"
-        ] / 100
-
-    )
-
-    footer_height = int(
-
-        height *
-
-        standard[
-            "layout"
-        ][
-            "footerAreaPercent"
-        ] / 100
-
-    )
-
-    artwork_top = title_height
-
-    artwork_bottom = (
-        height -
-        footer_height
-    )
-
-    # ------------------------------------------
+    #
     # Title
-    # ------------------------------------------
+    #
 
-    title = manifest.get(
-        "title",
-        ""
-    )
+    draw_title(
 
-    if standard[
-        "title"
-    ][
-        "uppercase"
-    ]:
+        draw,
 
-        title = title.upper()
+        width,
 
-    title_font = load_font(
-
-        standard[
-            "title"
-        ][
-            "fontSize"
-        ]
-
-    )
-
-    title_box = draw.textbbox(
-
-        (0, 0),
-
-        title,
-
-        font=title_font
-
-    )
-
-    title_width = (
-        title_box[2] -
-        title_box[0]
-    )
-
-    draw.text(
-
-        (
-            (
-                width -
-                title_width
-            ) / 2,
-            40
+        manifest.get(
+            "title",
+            ""
         ),
 
-        title,
+        title_config,
 
-        fill="black",
-
-        font=title_font
+        layout["title_y"]
 
     )
 
-    # ------------------------------------------
+    #
     # Artwork
-    # ------------------------------------------
+    #
 
     artwork = Image.open(
         artwork_path
@@ -304,73 +351,36 @@ def render_coloring_page(
 
         artwork,
 
-        (
-            100,
-            artwork_top,
-            width - 100,
-            artwork_bottom
-        )
+        layout["artwork_box"]
 
     )
 
-    # ------------------------------------------
+    #
     # Scripture
-    # ------------------------------------------
+    #
 
-    scripture_font = load_font(
+    draw_scripture(
 
-        standard[
-            "scripture"
-        ][
-            "fontSize"
-        ]
+        draw,
 
-    )
+        width,
 
-    scripture = manifest.get(
-        "scripture",
-        ""
-    )
+        height,
 
-    scripture_box = draw.textbbox(
-
-        (0, 0),
-
-        scripture,
-
-        font=scripture_font
-
-    )
-
-    scripture_width = (
-        scripture_box[2] -
-        scripture_box[0]
-    )
-
-    draw.text(
-
-        (
-            (
-                width -
-                scripture_width
-            ) / 2,
-
-            height -
-            footer_height +
-            40
+        manifest.get(
+            "scripture",
+            ""
         ),
 
-        scripture,
+        scripture_config,
 
-        fill="black",
-
-        font=scripture_font
+        layout["scripture_y"]
 
     )
 
-    # ------------------------------------------
+    #
     # Save
-    # ------------------------------------------
+    #
 
     page.save(
         output_path
@@ -381,7 +391,11 @@ def render_coloring_page(
     )
 
 
-if __name__ == "__main__":
+# --------------------------------------------------
+# Main
+# --------------------------------------------------
+
+def main():
 
     render_coloring_page(
 
@@ -398,3 +412,7 @@ if __name__ == "__main__":
             "page-004.png"
 
     )
+
+
+if __name__ == "__main__":
+    main()
