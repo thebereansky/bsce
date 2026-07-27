@@ -76,4 +76,39 @@
 
   ]
 
+},
+{
+  "rendering": {
+    "dpi": 300,
+    "widthPixels": 2550,
+    "heightPixels": 3300
+  },
+
+  "layout": {
+    "titleAreaPercent": 10,
+    "artworkAreaPercent": 75,
+    "footerAreaPercent": 15,
+
+    "sideMarginPixels": 120,
+    "topMarginPixels": 50
+  },
+
+  "title": {
+    "fontFamily": "Georgia",
+    "fontSize": 64,
+    "uppercase": false,
+    "alignment": "center"
+  },
+
+  "scripture": {
+    "fontFamily": "Georgia",
+    "fontSize": 42,
+    "alignment": "center"
+  },
+
+  "border": {
+    "marginPixels": 45,
+    "lineCount": 2,
+    "lineSpacingPixels": 10
+  }
 }
